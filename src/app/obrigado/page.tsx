@@ -58,7 +58,7 @@ export default function ThankYouPage() {
           className="h-auto w-full max-w-md text-lg md:text-xl py-4 bg-mint hover:bg-mint-dark text-white font-bold animate-subtle-pulse shadow-lg"
         >
           {/* Substitua '#' pelo seu link do Google Drive ou área de membros */}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/drive/folders/1vGHRGAm6_yqlMHRzkfecMRrrUWLOza4w?usp=sharing" target="_blank" rel="noopener noreferrer">
             <Download className="mr-2 h-5 w-5" />
             ACESSAR MEU PLANNER AGORA
           </a>

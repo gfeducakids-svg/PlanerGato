@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         subject: '🎉 Acesso Liberado - Seu Produto!',
         html: paymentApprovedTemplate({
           name: customerName,
-          access_url: 'https://pay.kiwify.com.br/iFQO80k', // Substitua pelo link real
+          access_url: 'https://drive.google.com/drive/folders/1vGHRGAm6_yqlMHRzkfecMRrrUWLOza4w?usp=sharing', // Substitua pelo link real
         })
       });
       console.log(`[Kiwify] ✅ E-mail de confirmação enviado para ${customerEmail}`);
