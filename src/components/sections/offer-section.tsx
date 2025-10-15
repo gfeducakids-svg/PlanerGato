@@ -79,7 +79,7 @@ export function OfferSection() {
                     ECONOMIA DE 82%
                 </div>
                 <Button asChild size="lg" className="w-full h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
-                    <a href="#">Comprar agora</a>
+                    <a href="https://pay.kiwify.com.br/iFQO80k">Comprar agora</a>
                 </Button>
                 <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-muted-foreground">
                     <div className="flex items-center gap-2 text-xs">

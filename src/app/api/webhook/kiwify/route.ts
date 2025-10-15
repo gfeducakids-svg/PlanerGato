@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         subject: '🎉 Acesso Liberado - Seu Produto!',
         html: paymentApprovedTemplate({
           name: customerName,
-          access_url: 'https://SEU_LINK_DE_ACESSO_AQUI', // Substitua pelo link real
+          access_url: 'https://pay.kiwify.com.br/iFQO80k', // Substitua pelo link real
         })
       });
       console.log(`[Kiwify] ✅ E-mail de confirmação enviado para ${customerEmail}`);
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     // Cenário 2: CARRINHO ABANDONADO
     else if (status === 'abandoned' && customerEmail) {
       console.log('[Kiwify] 🟨 Detectado: Carrinho Abandonado');
-      const checkoutLink = body.cart?.checkout_link ? `https://pay.kiwify.com.br/checkout/${body.cart.checkout_link}` : 'https://SEU_LINK_DE_CHECKOUT_PADRAO';
+      const checkoutLink = body.cart?.checkout_link ? `https://pay.kiwify.com.br/checkout/${body.cart.checkout_link}` : 'https://pay.kiwify.com.br/iFQO80k';
       
       await sendEmail({
         to: customerEmail,

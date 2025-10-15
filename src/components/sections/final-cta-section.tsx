@@ -16,7 +16,7 @@ export function FinalCtaSection() {
             size="lg"
             className="h-auto py-4 text-xl bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap"
           >
-            <a href="#">Quero parar de me sentir culpada e ver meu gato feliz em 7 dias</a>
+            <a href="https://pay.kiwify.com.br/iFQO80k">Quero parar de me sentir culpada e ver meu gato feliz em 7 dias</a>
           </Button>
           <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
             <span>✓ Acesso imediato</span>
