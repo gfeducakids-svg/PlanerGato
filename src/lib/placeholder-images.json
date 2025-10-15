@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A woman smiling while holding her cat on a cozy sofa.",
+      "imageUrl": "https://picsum.photos/seed/hero/1200/800",
+      "imageHint": "woman cat"
+    },
+    {
+      "id": "planner-image",
+      "description": "An open planner on a table with colorful pens.",
+      "imageUrl": "https://picsum.photos/seed/planner/500/600",
+      "imageHint": "planner book"
+    },
+    {
+      "id": "cat-bored",
+      "description": "A cat lying on a couch, looking bored and sleepy.",
+      "imageUrl": "https://picsum.photos/seed/catbored/600/400",
+      "imageHint": "bored cat"
+    },
+    {
+      "id": "cat-playing",
+      "description": "A cat actively and joyfully playing with a feather toy.",
+      "imageUrl": "https://picsum.photos/seed/catplaying/600/400",
+      "imageHint": "playing cat"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user1/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user2/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user3/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user4/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user5/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user6/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-7",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user7/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-8",
+      "description": "User avatar for testimonial.",
+      "imageUrl": "https://picsum.photos/seed/user8/100/100",
+      "imageHint": "person avatar"
+    }
+  ]
 }
