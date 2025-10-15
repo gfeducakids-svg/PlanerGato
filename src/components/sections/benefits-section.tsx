@@ -34,14 +34,6 @@ export function BenefitsSection() {
                 </div>
                 ))}
             </div>
-             <div className="text-center lg:text-left pt-4">
-                <Button asChild size="lg" className="bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg">
-                    <a href="#offer">
-                        Quero ver meu gato feliz!
-                        <ArrowRight className="ml-2 h-5 w-5"/>
-                    </a>
-                </Button>
-            </div>
           </div>
 
           <div className="flex justify-center items-center">
