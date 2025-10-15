@@ -25,21 +25,19 @@ export function HeroSection() {
                         </Button>
                          <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-1">
                             <span>✓ Acesso imediato</span>
-                            <span className="hidden sm:inline">|</span>
-                            <span>✓ Garantia de 7 dias</span>
                              <span className="hidden sm:inline">|</span>
                             <span>✓ Sem brinquedos caros</span>
                         </p>
                     </div>
                 </div>
 
-                <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
+                <div className="relative h-[400px] lg:h-[600px] flex items-center justify-center">
                     <div className="absolute bottom-0 -right-8">
                         <Image
                             src="https://i.imgur.com/Wx2sPfW.png"
                             alt="Especialista em comportamento felino"
-                            width={380}
-                            height={380}
+                            width={420}
+                            height={420}
                             className="rounded-full shadow-2xl z-0"
                             data-ai-hint="cat expert"
                         />
@@ -48,8 +46,8 @@ export function HeroSection() {
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
-                            width={280}
-                            height={280}
+                            width={320}
+                            height={320}
                             className="rounded-full shadow-2xl z-10 animate-subtle-bounce"
                             data-ai-hint="woman cat planner"
                             priority

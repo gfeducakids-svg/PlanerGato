@@ -20,7 +20,6 @@ export function FinalCtaSection() {
           </Button>
           <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
             <span>✓ Acesso imediato</span>
-            <span>✓ Garantia de 7 dias</span>
             <span>✓ Sem brinquedos caros</span>
           </p>
         </div>
