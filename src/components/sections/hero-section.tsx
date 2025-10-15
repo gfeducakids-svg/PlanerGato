@@ -42,7 +42,7 @@ export function HeroSection() {
                             data-ai-hint="cat expert"
                         />
                     </div>
-                    <div className="absolute bottom-10 -left-8">
+                    <div className="absolute bottom-0 -left-8">
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
