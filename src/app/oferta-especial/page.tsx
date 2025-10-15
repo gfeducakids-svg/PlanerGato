@@ -105,7 +105,7 @@ export default function BackRedirectPage() {
               <span className="line-through">Valor total: R$ 155,50</span>
             </p>
             <p className="text-2xl font-bold">
-              👉 Hoje por apenas:{' '}
+              AGORA:{' '}
               <span className="text-5xl font-headline text-coral">
                 R$ 19,90
               </span>
