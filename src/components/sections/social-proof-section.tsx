@@ -7,7 +7,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Star } from "lucide-react";
 
 // SVG Icons for Social Media
@@ -53,21 +52,42 @@ const testimonials = [
     name: "@julianamcervantes",
     text: "Gentem mudou tudo meu gato só dormia e agora corre pela casa igual foguete 😂🔥 melhores 27,90 que já gastei!",
     network: "instagram",
-    avatarId: "user1"
+    avatarUrl: "https://i.imgur.com/csTU30S.png",
   },
   {
     id: "testimonial-insta-2",
     name: "@marcosvbusiness",
     text: "Sério, em uma semana o Thor virou OUTRO gato nunca vi ele brincar com tanta alegria recomendo demais !",
     network: "instagram",
-    avatarId: "user2"
+    avatarUrl: "https://i.imgur.com/ykX7yRT.png",
   },
   {
     id: "testimonial-insta-3",
     name: "@beatrizluna",
     text: "Antes ele só dormia agora me espera na porta pra brincar comigo 😍 coisa mais linda do mundo. 🐾❤️",
     network: "instagram",
-    avatarId: "user3"
+    avatarUrl: "https://i.imgur.com/eaV3Rz0.png",
+  },
+   {
+    id: "testimonial-insta-4",
+    name: "@fernanda_ama_gatos",
+    text: "To impressionada! Em 10 dias já vi muita diferença 😍 e sem brinquedo caro, só usando o planner 😍😍😍",
+    network: "instagram",
+    avatarUrl: "https://i.imgur.com/ZgQd7bj.png",
+  },
+   {
+    id: "testimonial-insta-5",
+    name: "@claramendes.g",
+    text: "Me sinto a melhor dona do mundo  todo dia a gente tem nosso momentinho especial 💕 obrigadaa planerrrrr 💖",
+    network: "instagram",
+    avatarUrl: "https://i.imgur.com/049TDDK.png",
+  },
+   {
+    id: "testimonial-insta-6",
+    name: "@lucas_gpet",
+    text: "Comprem sem pensar! 😂 sério, 27 reais que mudam o humor do gato pra sempre!!!!",
+    network: "instagram",
+    avatarUrl: "https://i.imgur.com/EwpHLBf.png",
   },
   // WhatsApp
   {
@@ -75,21 +95,28 @@ const testimonials = [
     name: "Fernanda C.",
     text: "amg vc n acredita kkkk em 10 dias meu gato virou outro 😍 e o melhor, nem precisei comprar brinquedo caro rsrs ❤️",
     network: "whatsapp",
-    avatarId: "user4"
+    avatarUrl: "https://i.imgur.com/3iBL5cd.png",
   },
   {
     id: "testimonial-wpp-2",
     name: "Clara M.",
     text: "aqui em casa ta demais kkk todo dia ele vem me chamar pra brincar 🤣 to mt feliz, virou rotina ja ❤️",
     network: "whatsapp",
-avatarId: "user5"
+    avatarUrl: "https://i.imgur.com/jEitktN.png",
   },
   {
     id: "testimonial-wpp-3",
     name: "Sonia R.",
     text: "meu gato ja ta velhinho e msm assim ficou todo animado 😭 fiquei emocionada, valeu cada centavo 🥹❤️",
     network: "whatsapp",
-    avatarId: "user7"
+    avatarUrl: "https://i.imgur.com/nmFpQ8x.png",
+  },
+   {
+    id: "testimonial-wpp-4",
+    name: "Marcos V.",
+    text: "usei achando q n ia mudar nada mas cara... em uma semana ele ta correndo e brincando igual filhote",
+    network: "whatsapp",
+    avatarUrl: "https://i.imgur.com/XRUtzqz.png",
   },
   // Facebook
   {
@@ -97,14 +124,21 @@ avatarId: "user5"
     name: "Juliana P.",
     text: "Meu gato não parava de dormir, agora corre pela casa como um foguete! O melhor investimento que já fiz pra ele ❤️ vale cada minuto e cada centavo!",
     network: "facebook",
-    avatarId: "user1"
+    avatarUrl: "https://i.imgur.com/xlpLSBc.png",
   },
   {
     id: "testimonial-fb-2",
     name: "Rodrigo A.",
     text: "Fantástico como pequenas brincadeiras diárias fazem tanta diferença. Ele até me espera pra brincar agora! A energia dele mudou completamente 👏",
     network: "facebook",
-    avatarId: "user6"
+    avatarUrl: "https://i.imgur.com/M3rwlhl.jpeg",
+  },
+  {
+    id: "testimonial-fb-3",
+    name: "Beatriz L.",
+    text: "Antes ele só dormia, agora me espera na porta pra brincar. É lindo ver ele feliz de novo 🥰 recomendo demais pra quem tem gato preguiçoso!",
+    network: "facebook",
+    avatarUrl: "https://i.imgur.com/Dxpt2qx.png",
   },
 ];
 
@@ -129,25 +163,21 @@ export function SocialProofSection() {
           className="w-full"
         >
           <CarouselContent>
-            {testimonials.map((testimonial) => {
-              const avatar = PlaceHolderImages.find(img => img.id === testimonial.avatarId);
-              return (
+            {testimonials.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                     <Card className="h-full flex flex-col">
                       <CardContent className="flex flex-col flex-grow justify-between p-6">
                         <div>
                           <div className="flex items-center mb-4">
-                            {avatar && (
-                              <Image
-                                src={avatar.imageUrl}
+                            <Image
+                                src={testimonial.avatarUrl}
                                 alt={`Avatar de ${testimonial.name}`}
                                 width={48}
                                 height={48}
-                                data-ai-hint={avatar.imageHint}
+                                data-ai-hint="person avatar"
                                 className="rounded-full"
                               />
-                            )}
                             <div className="ml-4">
                               <p className="font-bold text-sm">{testimonial.name}</p>
                               <div className="flex text-secondary mt-1">
@@ -164,8 +194,7 @@ export function SocialProofSection() {
                     </Card>
                   </div>
                 </CarouselItem>
-              );
-            })}
+              ))}
           </CarouselContent>
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselNext className="hidden sm:flex" />
