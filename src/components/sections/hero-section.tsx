@@ -12,7 +12,7 @@ export function HeroSection() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-6">
                     <h1 className="text-4xl md:text-5xl font-headline leading-tight">
-                        30 dias para o gato que te espera na porta todo dia
+                        De gato que só dorme para gato que brinca como filhote
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                         em 7 dias seu gato vai te esperar na porta com aquela carinha de "vamos brincar?" Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D
