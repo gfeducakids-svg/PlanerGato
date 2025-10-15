@@ -28,7 +28,7 @@ export async function sendEmail({ to, subject, html }: SendEmailParams) {
   }
 
   const mailOptions = {
-    from: `"Purrfect Play Planner" <${process.env.GMAIL_USER}>`, // Personalize o remetente
+    from: `"Instinto Feliz" <${process.env.GMAIL_USER}>`, // Personalize o remetente
     to,
     subject,
     html, // O corpo do e-mail em HTML
@@ -43,3 +43,5 @@ export async function sendEmail({ to, subject, html }: SendEmailParams) {
     throw new Error('Falha ao enviar o e-mail.');
   }
 }
+
+    
