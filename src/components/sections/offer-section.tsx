@@ -10,9 +10,6 @@ export function OfferSection() {
             <h2 className="text-3xl md:text-4xl font-headline text-primary">
               Seu passaporte para um gato mais feliz.
             </h2>
-            <p className="mt-3 text-lg text-muted-foreground">
-              Receba acesso imediato a tudo que você precisa para começar.
-            </p>
           </div>
 
           <div className="bg-background rounded-2xl shadow-xl p-8">
