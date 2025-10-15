@@ -51,7 +51,7 @@ export function OfferSection() {
                     ECONOMIA DE 65%
                 </div>
                 <Button asChild size="lg" className="w-full mt-8 h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
-                    <a href="#">Quero parar de me sentir culpada e ver meu gato feliz em 7 dias</a>
+                    <a href="#">Comprar agora</a>
                 </Button>
                 <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-muted-foreground">
                     <div className="flex items-center gap-2 text-xs">
