@@ -48,13 +48,10 @@ export default function ThankYouPage() {
           </p>
         </div>
 
-        <p className="text-lg font-semibold text-gray-800">
+        <p className="text-lg font-semibold text-gray-800 mb-8">
           👉 Seu acesso já está liberado!
         </p>
-        <p className="text-muted-foreground mt-2 mb-8">
-          Clique no botão abaixo para baixar o Planner 30 Dias com o Método Instinto Feliz 3D e começar hoje mesmo:
-        </p>
-
+        
         <Button
           asChild
           size="lg"
