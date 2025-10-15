@@ -12,14 +12,14 @@ export default function BackRedirectPage() {
             🐾 Espera... você vai mesmo deixar seu gato sem isso?
           </h1>
           <h2 className="text-2xl md:text-3xl font-headline text-gray-800 font-semibold mb-6">
-            Vai perder essa SUPER OFERTA?
+            Sua última chance de garantir essa SUPER OFERTA!
           </h2>
 
           <div className="text-left text-muted-foreground space-y-4 my-8 text-base md:text-lg">
             <p>Ele te olha todo dia com aquele olhar curioso.</p>
             <p>
-              Você sabe — ele só precisa de um empurrãozinho pra voltar a
-              brincar, explorar, ronronar de alegria.
+              Você sabe — ele só precisa de um empurrãozinho para voltar a
+              brincar, explorar e <span className="font-semibold text-primary">ronronar de alegria.</span>
             </p>
             <p>
               E agora você tem a chance de transformar isso por apenas{' '}
@@ -29,7 +29,7 @@ export default function BackRedirectPage() {
               <span className="font-semibold text-primary">
                 Menos do que um sachê premium.
               </span>{' '}
-              Mais do que um presente: é seu passaporte para um gato mais feliz.
+              É o seu passaporte para um gato mais feliz.
             </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function BackRedirectPage() {
           </div>
 
            <p className="text-center italic text-lg text-gray-700 font-semibold my-8 px-4">
-             ❤️ “Não deixe seu gato te esperar na porta e você dizer não.”
+             ❤️ Não deixe seu gato te esperar na porta e você dizer não.
            </p>
            
            <p className="text-center text-muted-foreground mb-6">
