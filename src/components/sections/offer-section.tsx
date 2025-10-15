@@ -38,7 +38,7 @@ export function OfferSection() {
                   </li>
                    <li className="flex justify-between items-start gap-2">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
-                    <span className="flex-grow">Acesso à Comunidade Exclusiva</span>
+                    <span className="flex-grow">Guia de Correção Rápida de Comportamentos</span>
                     <span className="text-xs">(R$ 47,00)</span>
                   </li>
                 </ul>
