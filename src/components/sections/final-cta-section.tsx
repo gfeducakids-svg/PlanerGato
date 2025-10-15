@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Lock, CreditCard, Sparkles } from "lucide-react";
 
 export function FinalCtaSection() {
   return (
@@ -22,20 +21,6 @@ export function FinalCtaSection() {
           <p className="mt-3 text-sm text-muted-foreground">
             Garantia de 7 dias sem risco.
           </p>
-        </div>
-        <div className="mt-10 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-muted-foreground">
-            <div className="flex items-center gap-2 text-sm">
-                <Lock className="h-4 w-4 text-green-500" />
-                <span>Compra Segura SSL</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-                <CreditCard className="h-4 w-4" />
-                <span>Pix e Cartão</span>
-            </div>
-             <div className="flex items-center gap-2 text-sm">
-                <Sparkles className="h-4 w-4 text-yellow-500" />
-                <span>Acesso Imediato</span>
-            </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Gift } from "lucide-react";
+import { Check, Gift, Lock, CreditCard, Sparkles } from "lucide-react";
 
 const offerComponents = [
   "30 ideias de brincadeiras estruturadas (Descoberta, Desafio e Descanso)",
@@ -53,6 +53,20 @@ export function OfferSection() {
                 <Button asChild size="lg" className="w-full mt-8 h-12 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg">
                     <a href="#">Garantir meu Planner por R$ 27,90</a>
                 </Button>
+                <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-muted-foreground">
+                    <div className="flex items-center gap-2 text-xs">
+                        <Lock className="h-4 w-4 text-green-500" />
+                        <span>Compra Segura SSL</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                        <CreditCard className="h-4 w-4" />
+                        <span>Pix e Cartão</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                        <Sparkles className="h-4 w-4 text-yellow-500" />
+                        <span>Acesso Imediato</span>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
