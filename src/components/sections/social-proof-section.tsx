@@ -63,7 +63,7 @@ export function SocialProofSection() {
             Amado por tutores (e seus gatos)
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Veja o que outros pais e mães de pet estão dizendo sobre o #DesafioInstintoFeliz30Dias.
+            Veja o que outros pais e mães de pet estão dizendo.
           </p>
         </div>
         <Carousel
