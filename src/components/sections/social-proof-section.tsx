@@ -112,14 +112,6 @@ export function SocialProofSection() {
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
-        <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-coral hover:bg-coral/90 text-white font-bold">
-              <a href="#offer">
-                Quero fazer parte do #DesafioInstintoFeliz30Dias
-                <ArrowRight className="ml-2 h-5 w-5"/>
-              </a>
-            </Button>
-        </div>
       </div>
     </section>
   );
