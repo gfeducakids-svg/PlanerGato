@@ -4,13 +4,13 @@ import { PawPrint, CheckCircle } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative bg-background overflow-hidden py-12 md:py-16">
+    <section className="relative bg-background overflow-hidden py-8 md:py-12">
         <div className="absolute -bottom-1/3 -right-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl" />
         <div className="absolute -top-1/f-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl" />
 
         <div className="container relative mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="text-center lg:text-left space-y-6">
+                <div className="text-center lg:text-left space-y-4">
                     <h1 className="text-4xl md:text-5xl font-headline leading-tight">
                         De gato que só dorme o dia todo para gato que te espera animado na porta todo dia
                     </h1>
@@ -36,8 +36,8 @@ export function HeroSection() {
                         <Image
                             src="https://i.imgur.com/Wx2sPfW.png"
                             alt="Especialista em comportamento felino"
-                            width={350}
-                            height={350}
+                            width={400}
+                            height={400}
                             className="rounded-full shadow-2xl z-0"
                             data-ai-hint="cat expert"
                         />
@@ -46,8 +46,8 @@ export function HeroSection() {
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
-                            width={250}
-                            height={250}
+                            width={200}
+                            height={200}
                             className="rounded-full shadow-2xl z-10 animate-subtle-bounce"
                             data-ai-hint="woman cat planner"
                             priority
