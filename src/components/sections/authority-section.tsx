@@ -2,7 +2,7 @@ import { PawPrint } from 'lucide-react';
 
 export function AuthoritySection() {
   return (
-    <section className="py-12 md:py-24 bg-card">
+    <section className="py-12 md:py-16 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6 text-center">

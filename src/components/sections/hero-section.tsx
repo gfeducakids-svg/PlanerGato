@@ -8,7 +8,7 @@ export function HeroSection() {
         <div className="absolute -bottom-1/3 -right-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl" />
         <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl" />
 
-        <div className="container relative mx-auto px-4 md:px-6 py-16 md:py-24">
+        <div className="container relative mx-auto px-4 md:px-6 py-12 md:py-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-6">
                     <h1 className="text-4xl md:text-6xl font-headline leading-tight">

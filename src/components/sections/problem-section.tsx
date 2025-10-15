@@ -10,7 +10,7 @@ const painPoints = [
 
 export function ProblemSection() {
   return (
-    <section id="problem" className="py-12 md:py-24 bg-card">
+    <section id="problem" className="py-12 md:py-16 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

@@ -14,7 +14,7 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section id="benefits" className="py-12 md:py-24 bg-background">
+    <section id="benefits" className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

@@ -10,7 +10,7 @@ const offerComponents = [
 
 export function OfferSection() {
   return (
-    <section id="offer" className="py-12 md:py-24 bg-card">
+    <section id="offer" className="py-12 md:py-16 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

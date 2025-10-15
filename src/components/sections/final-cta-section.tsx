@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function FinalCtaSection() {
   return (
-    <section className="py-16 md:py-28 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-headline text-primary">
           Pronta para a transformação?
