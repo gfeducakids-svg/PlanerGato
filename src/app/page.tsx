@@ -9,7 +9,6 @@ import { OfferSection } from '@/components/sections/offer-section';
 import { PersonalizedTipsSection } from '@/components/sections/personalized-tips-section';
 import { ProblemSection } from '@/components/sections/problem-section';
 import { SocialProofSection } from '@/components/sections/social-proof-section';
-import { SolutionSection } from '@/components/sections/solution-section';
 import { UrgencySection } from '@/components/sections/urgency-section';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ProblemSection />
-        <SolutionSection />
         <BenefitsSection />
         <PersonalizedTipsSection />
         <AuthoritySection />
