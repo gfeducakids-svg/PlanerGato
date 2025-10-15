@@ -31,12 +31,6 @@ export function ProblemSection() {
             <p className="text-lg text-muted-foreground">
                 Um gato entediado não é só um gato triste. É um animal que pode desenvolver estresse, ansiedade e até problemas de saúde. A boa notícia é que reverter isso é mais simples do que parece.
             </p>
-            <Button asChild size="lg" className="bg-coral hover:bg-coral/90 text-white font-bold">
-              <a href="#solution">
-                Quero acabar com o tédio do meu gato
-                <ArrowRight className="ml-2 h-5 w-5"/>
-              </a>
-            </Button>
           </div>
         </div>
       </div>
