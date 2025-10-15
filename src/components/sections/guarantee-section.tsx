@@ -16,10 +16,13 @@ export function GuaranteeSection() {
           </div>
           <div className="md:col-span-2 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-headline text-yellow-800">
-              Sua Satisfação ou seu Dinheiro de Volta!
+              Risco zero, só alegria — para você e seu gato.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Temos tanta confiança no poder do Planner que oferecemos uma garantia de risco zero. Se em até 7 dias você não sentir uma diferença real no comportamento e na felicidade do seu gato, basta nos enviar um e-mail e devolveremos 100% do seu investimento. Sem perguntas, sem burocracia.
+              Acreditamos tanto no poder do Planner 30 Dias de Brincadeiras que oferecemos uma garantia total de satisfação. Se em até 7 dias você não perceber seu gato mais ativo, curioso ou feliz, basta solicitar seu reembolso que devolvemos 100% do seu investimento — sem perguntas, sem formulários, sem estresse.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Seu único risco é… ver seu gato te esperando com o rabo em pé todos os dias.
             </p>
           </div>
         </div>
