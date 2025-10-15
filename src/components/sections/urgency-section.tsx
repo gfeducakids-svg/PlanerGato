@@ -11,7 +11,7 @@ export function UrgencySection() {
         <p className="mt-3 max-w-2xl mx-auto text-lg text-white/90">
           Cada dia que você adia é mais um dia de tédio para o seu gato (e mais culpa pra você carregar).
         </p>
-        <p className="mt-4 text-lg text-white/90">O preço volta para R$ 79,00 em:</p>
+        <p className="mt-4 text-lg text-white/90">O preço volta para R$ 155,50 em:</p>
         <div className="my-8 flex justify-center">
             <CountdownTimer />
         </div>

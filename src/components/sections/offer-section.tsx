@@ -21,22 +21,22 @@ export function OfferSection() {
                   <li className="flex justify-between items-start gap-2">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                     <span className="flex-grow">Planner 30 Dias com Método Instinto Feliz 3D</span>
-                    <span className="text-xs">(R$ 79,00)</span>
+                    <span className="text-xs">(R$ 49,00)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                     <span className="flex-grow">Tabela de Progresso Semanal</span>
-                    <span className="text-xs">(R$ 17,00)</span>
+                    <span className="text-xs">(R$ 9,90)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                     <span className="flex-grow">Guia de Enriquecimento Ambiental</span>
-                    <span className="text-xs">(R$ 29,00)</span>
+                    <span className="text-xs">(R$ 19,90)</span>
                   </li>
                    <li className="flex justify-between items-start gap-2">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                     <span className="flex-grow">Guia de Correção Rápida de Comportamentos</span>
-                    <span className="text-xs">(R$ 47,00)</span>
+                    <span className="text-xs">(R$ 19,90)</span>
                   </li>
                 </ul>
                 <div className="space-y-4 pt-4">
@@ -47,15 +47,15 @@ export function OfferSection() {
                     <div className="pl-4 space-y-3">
                         <div className="p-3 bg-card rounded-md">
                             <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> BÔNUS: Guia "Rituais Noturnos para Gatos Agitados"</p>
-                            <p className="text-sm text-muted-foreground ml-5">Passo a passo para acalmar seu gato antes de dormir. <span className="font-bold">(Valor: R$ 27,00)</span></p>
+                            <p className="text-sm text-muted-foreground ml-5">Passo a passo para acalmar seu gato antes de dormir. <span className="font-bold">(Valor: R$ 19,00)</span></p>
                         </div>
                         <div className="p-3 bg-card rounded-md">
                             <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> BÔNUS: E-book "Decodificando seu Gato"</p>
-                            <p className="text-sm text-muted-foreground ml-5">Aprenda a identificar os sinais de tédio, estresse e felicidade. <span className="font-bold">(Valor: R$ 24,00)</span></p>
+                            <p className="text-sm text-muted-foreground ml-5">Aprenda a identificar os sinais de tédio, estresse e felicidade. <span className="font-bold">(Valor: R$ 19,90)</span></p>
                         </div>
                         <div className="p-3 bg-card rounded-md">
                             <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> BÔNUS: Receitas de Petiscos Caseiros Saudáveis</p>
-                            <p className="text-sm text-muted-foreground ml-5">5 receitas aprovadas por veterinários para recompensar seu gato. <span className="font-bold">(Valor: R$ 17,00)</span></p>
+                            <p className="text-sm text-muted-foreground ml-5">10 receitas aprovadas por veterinários para recompensar seu gato. <span className="font-bold">(Valor: R$ 17,90)</span></p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export function OfferSection() {
                     <h4 className="font-headline text-lg">Resumo do seu Investimento</h4>
                     <div className="flex justify-between items-center text-muted-foreground">
                         <span>Total dos itens</span>
-                        <span className="line-through">R$ 240,00</span>
+                        <span className="line-through">R$ 155,50</span>
                     </div>
                     <div className="flex justify-between items-center font-bold text-primary text-lg">
                         <span>Você paga hoje:</span>
@@ -75,7 +75,7 @@ export function OfferSection() {
                     </div>
                   </div>
                 <div className="bg-destructive text-destructive-foreground font-bold text-sm px-3 py-1 rounded-full my-4">
-                    ECONOMIA DE 88%
+                    ECONOMIA DE 82%
                 </div>
                 <Button asChild size="lg" className="w-full h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
                     <a href="#">Comprar agora</a>
