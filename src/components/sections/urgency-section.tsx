@@ -9,7 +9,7 @@ export function UrgencySection() {
           Última chance de pegar por R$ 27,90
         </h2>
         <p className="mt-3 max-w-2xl mx-auto text-lg text-white/90">
-          Centenas de tutoras já começaram o desafio hoje. Cada dia que você adia é mais um dia de tédio para o seu gato (e mais culpa pra você carregar).
+          Cada dia que você adia é mais um dia de tédio para o seu gato (e mais culpa pra você carregar).
         </p>
         <p className="mt-4 text-lg text-white/90">O preço volta para R$ 79,00 em:</p>
         <div className="my-8 flex justify-center">
