@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -17,6 +18,8 @@ export default {
       },
       colors: {
         coral: '#FB4C29',
+        mint: '#10B981',
+        'mint-dark': '#0F966A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
