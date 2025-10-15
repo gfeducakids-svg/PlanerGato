@@ -10,7 +10,7 @@ export function AuthoritySection() {
               Criado por especialistas, inspirado em gatos.
             </h2>
             <p className="text-lg text-muted-foreground font-highlight max-w-3xl mx-auto">
-              “Depois de observar dezenas de tutoras frustradas, criamos o Método Instinto Feliz 3D — inspirado no comportamento natural dos felinos. Cada brincadeira segue o ritmo biológico da caça, garantindo equilíbrio físico e emocional.”
+              Depois de observar dezenas de tutoras frustradas, criamos o Método Instinto Feliz 3D — inspirado no comportamento natural dos felinos. Cada brincadeira segue o ritmo biológico da caça, garantindo equilíbrio físico e emocional.
             </p>
             <div className="bg-background rounded-xl p-8 shadow-lg space-y-6 !mt-10 inline-block">
                 <h3 className="font-headline text-xl text-center">Nossas Credenciais</h3>
