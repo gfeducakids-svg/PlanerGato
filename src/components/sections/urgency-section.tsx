@@ -3,7 +3,7 @@ import { AlertCircle } from "lucide-react";
 
 export function UrgencySection() {
   return (
-    <section className="bg-gradient-to-br from-primary via-coral to-secondary py-12 md:py-16">
+    <section className="bg-gradient-to-br from-primary via-coral to-secondary py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 text-center text-white">
         <h2 className="text-2xl md:text-4xl font-headline">
           Última chance de pegar por R$ 27,90

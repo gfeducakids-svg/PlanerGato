@@ -4,7 +4,7 @@ import { PawPrint, CheckCircle } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative bg-background overflow-hidden py-8 md:py-12">
+    <section className="relative bg-background overflow-hidden py-8 md:py-10">
         <div className="absolute -bottom-1/3 -right-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl" />
         <div className="absolute -top-1/f-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl" />
 

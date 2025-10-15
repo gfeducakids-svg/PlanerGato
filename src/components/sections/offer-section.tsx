@@ -3,10 +3,10 @@ import { Check, Gift, Lock, CreditCard, Sparkles, Star } from "lucide-react";
 
 export function OfferSection() {
   return (
-    <section id="offer" className="py-12 md:py-16 bg-card">
+    <section id="offer" className="py-8 md:py-12 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-headline text-primary">
               Seu passaporte para um gato mais feliz.
             </h2>
