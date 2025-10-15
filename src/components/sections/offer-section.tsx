@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Gift, Lock, CreditCard, Sparkles, Star } from "lucide-react";
+import { Check, Gift, Lock, CreditCard, Sparkles, Star, Send } from "lucide-react";
 
 export function OfferSection() {
   return (
@@ -10,6 +10,7 @@ export function OfferSection() {
             <h2 className="text-3xl md:text-4xl font-headline text-secondary">
               Seu passaporte para um gato mais feliz.
             </h2>
+            <Send className="h-8 w-8 text-primary mx-auto mt-4" />
           </div>
 
           <div className="bg-background rounded-2xl shadow-xl p-8">
