@@ -13,9 +13,6 @@ const benefits = [
 ];
 
 export function BenefitsSection() {
-  const catBoredImg = PlaceHolderImages.find(img => img.id === "cat-bored");
-  const catPlayingImg = PlaceHolderImages.find(img => img.id === "cat-playing");
-
   return (
     <section id="benefits" className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -47,34 +44,15 @@ export function BenefitsSection() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center gap-4">
-            <div className="flex flex-col items-center space-y-2 transform -rotate-3">
-              <span className="font-headline text-2xl text-muted-foreground">Antes</span>
-              {catBoredImg && (
-                <Image
-                  src={catBoredImg.imageUrl}
-                  alt="Gato entediado"
-                  width={250}
-                  height={167}
-                  data-ai-hint={catBoredImg.imageHint}
-                  className="rounded-xl shadow-lg border-4 border-white"
-                />
-              )}
-            </div>
-            <ArrowRight className="h-12 w-12 text-primary shrink-0"/>
-            <div className="flex flex-col items-center space-y-2 transform rotate-3">
-              <span className="font-headline text-2xl text-primary">Depois</span>
-              {catPlayingImg && (
-                <Image
-                  src={catPlayingImg.imageUrl}
-                  alt="Gato brincando feliz"
-                  width={250}
-                  height={167}
-                  data-ai-hint={catPlayingImg.imageHint}
-                  className="rounded-xl shadow-lg border-4 border-white"
-                />
-              )}
-            </div>
+          <div className="flex justify-center items-center">
+            <Image
+              src="https://i.imgur.com/xhCuIcr.png"
+              alt="Comparação antes e depois do planner"
+              width={500}
+              height={333}
+              data-ai-hint="cat comparison"
+              className="rounded-xl shadow-lg"
+            />
           </div>
         </div>
       </div>
