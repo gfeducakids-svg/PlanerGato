@@ -11,8 +11,8 @@ export function HeroSection() {
         <div className="container relative mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-headline leading-tight text-primary animate-fade-in-up">
-                        <span className="text-foreground">De gato que só dorme o dia todo para</span> gato que te espera <span className="inline-block animate-subtle-bounce">animado</span> na porta todo dia
+                    <h1 className="text-4xl md:text-5xl font-headline leading-tight animate-fade-in-up">
+                        <span className="text-foreground">De gato que só dorme o dia todo para</span> gato que te espera <span className="text-primary inline-block animate-subtle-bounce">animado</span> na porta todo dia
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                         O Planner 30 Dias com <span className="font-bold" style={{color: '#FACC15'}}>Método Instinto Feliz 3D</span> que transforma 5 minutos em pura conexão.
@@ -31,18 +31,18 @@ export function HeroSection() {
                     </div>
                 </div>
 
-                <div className="relative h-[350px] lg:h-[450px] flex items-center justify-center">
-                    <div className="absolute bottom-0 -right-8">
+                <div className="relative h-[400px] lg:h-[450px] flex items-center justify-center">
+                    <div className="absolute inset-0">
                         <Image
                             src="https://i.imgur.com/Wx2sPfW.png"
                             alt="Especialista em comportamento felino"
                             width={500}
                             height={500}
-                            className="rounded-full shadow-2xl z-0"
+                            className="rounded-full shadow-2xl z-0 object-cover w-full h-full"
                             data-ai-hint="cat expert"
                         />
                     </div>
-                    <div className="absolute bottom-[-20px] -left-8">
+                    <div className="absolute -bottom-5 left-0">
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
