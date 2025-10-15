@@ -69,7 +69,7 @@ export function OfferSection() {
                   <div className="w-full space-y-2">
                     <h4 className="font-headline text-lg">Resumo do seu Investimento</h4>
                     <div className="flex justify-between items-center text-muted-foreground">
-                        <span>Valor Total de todos os itens:</span>
+                        <span>Total dos itens</span>
                         <span className="line-through">R$ 240,00</span>
                     </div>
                     <div className="flex justify-between items-center font-bold text-primary text-lg">
