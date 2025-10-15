@@ -8,27 +8,27 @@ import {
 const faqs = [
   {
     question: "Não tenho tempo.",
-    answer: "O método foi desenhado para rotinas corridas. São apenas 5 minutos por dia para criar um momento de qualidade com seu gato e ver resultados.",
+    answer: "O método foi criado exatamente para quem tem rotina corrida. São apenas 5 minutos por dia — o suficiente para transformar tédio em alegria e criar um momento de conexão diária com seu gato.",
   },
   {
     question: "Meu gato é idoso. Ele vai gostar?",
-    answer: "Sim! As brincadeiras são adaptáveis por nível de energia. Gatos idosos se beneficiam muito de estímulos leves que mantêm a mente e o corpo ativos.",
+    answer: "Sim! As brincadeiras são ajustáveis conforme o nível de energia. Muitos tutores relatam que gatos idosos voltaram a se mover, explorar e demonstrar curiosidade — tudo de forma leve e segura.",
   },
   {
     question: "E se meu gato não gostar das brincadeiras?",
-    answer: "O Método 3D foi testado em mais de 300 gatos de todas as idades, raças e personalidades. A variedade de atividades de Descoberta, Desafio e Descanso aumenta drasticamente a chance de engajamento, pois respeita o instinto natural dele.",
+    answer: "O Método Instinto Feliz 3D foi testado com mais de 300 gatos de diferentes idades, raças e personalidades. A sequência Descoberta → Desafio → Descanso respeita o instinto natural felino e desperta o interesse até dos mais preguiçosos.",
   },
   {
     question: "Preciso comprar brinquedos caros?",
-    answer: "De forma alguma! O planner inclui um guia para usar objetos caseiros e seguros que você já tem em casa. O foco é na criatividade e na interação, não no custo.",
+    answer: "De forma alguma! O planner mostra como usar objetos que você já tem em casa — caixas, papéis, barbantes — de forma criativa e segura. O segredo não está no preço do brinquedo, mas no estímulo certo.",
   },
   {
     question: "O planner é digital ou físico?",
-    answer: "É um produto 100% digital. Você recebe o acesso por e-mail imediatamente após a confirmação do pagamento e já pode começar a usar.",
+    answer: "É 100% digital. Assim que o pagamento é confirmado, você recebe o acesso direto no e-mail e pode começar a brincar ainda hoje.",
   },
   {
-    question: "Terei algum suporte se tiver dúvidas?",
-    answer: "Sim! Ao adquirir o planner, você ganha acesso à nossa comunidade exclusiva de tutores, onde pode tirar dúvidas, compartilhar experiências e receber dicas da nossa equipe.",
+    question: "Terei suporte se tiver dúvidas?",
+    answer: "Sim! Ao adquirir o planner, você entra para a Comunidade Instinto Feliz, onde tutoras trocam experiências, compartilham vídeos dos gatos e recebem dicas da equipe. É como ter um grupo de mães de gato sempre por perto.",
   },
 ];
 
