@@ -77,7 +77,7 @@ export function OfferSection() {
                         <span>R$ 27,90</span>
                     </div>
                   </div>
-                <div className="bg-secondary text-secondary-foreground font-bold text-sm px-3 py-1 rounded-full my-4">
+                <div className="bg-coral text-white font-bold text-sm px-3 py-1 rounded-full my-4">
                     ECONOMIA DE 88%
                 </div>
                 <Button asChild size="lg" className="w-full h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
