@@ -28,22 +28,22 @@ export function HeroSection() {
                 </div>
 
                 <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
-                    <div className="absolute bottom-0 left-0">
+                    <div className="absolute bottom-0 right-0">
                         <Image
                             src="https://i.imgur.com/Wx2sPfW.png"
                             alt="Especialista em comportamento felino"
-                            width={200}
-                            height={200}
+                            width={300}
+                            height={300}
                             className="rounded-full shadow-2xl z-0"
                             data-ai-hint="cat expert"
                         />
                     </div>
-                    <div className="absolute bottom-10 left-32">
+                    <div className="absolute bottom-10 left-0">
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
-                            width={150}
-                            height={150}
+                            width={200}
+                            height={200}
                             className="rounded-full shadow-2xl z-10 animate-subtle-bounce"
                             data-ai-hint="woman cat planner"
                             priority
