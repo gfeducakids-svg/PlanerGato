@@ -14,7 +14,7 @@ import {z} from 'genkit';
 const PersonalizedPlayTipsInputSchema = z.object({
   breed: z.string().describe('The breed of the cat.'),
   age: z.number().describe('The age of the cat in years.'),
-  preferences: z.string().describe('The cat\u2019s play preferences (e.g., toys, activities).'),
+  preferences: z.string().describe('The cat’s play preferences (e.g., toys, activities).'),
 });
 export type PersonalizedPlayTipsInput = z.infer<typeof PersonalizedPlayTipsInputSchema>;
 

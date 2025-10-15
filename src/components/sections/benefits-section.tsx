@@ -9,7 +9,7 @@ const benefits = [
   { icon: Clock, text: "Rotina divertida em 5 min por dia" },
   { icon: Heart, text: "Mais vínculo e carinho com o pet" },
   { icon: Home, text: "Ambiente enriquecido sem brinquedos caros" },
-  { icon: Sparkles, text: "Tutora confiante и sem culpa" },
+  { icon: Sparkles, text: "Tutora confiante e sem culpa" },
 ];
 
 export function BenefitsSection() {
