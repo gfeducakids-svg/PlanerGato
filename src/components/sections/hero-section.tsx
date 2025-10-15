@@ -15,7 +15,7 @@ export function HeroSection() {
                         De gato que só dorme para gato que brinca como filhote
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                        em 7 dias seu gato vai te esperar na porta com aquela carinha de "vamos brincar?" Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D
+                        Em 7 dias seu gato vai te esperar na porta com aquela carinha de "vamos brincar?" Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D
                     </p>
                     <div className="pt-4">
                         <Button asChild size="lg" className="h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
