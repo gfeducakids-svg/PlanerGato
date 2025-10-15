@@ -12,10 +12,10 @@ export function HeroSection() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-6">
                     <h1 className="text-4xl md:text-5xl font-headline leading-tight">
-                        De gato que só dorme para gato que brinca como filhote
+                        De gato que só dorme o dia todo para gato que te espera animado na porta todo dia
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                        Em 7 dias seu gato vai te esperar na porta com aquela carinha de "vamos brincar?" Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D
+                        O Planner 30 Dias com Método Instinto Feliz 3D que transforma 5 minutos em pura conexão.
                     </p>
                     <div className="pt-4">
                         <Button asChild size="lg" className="h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
@@ -36,8 +36,8 @@ export function HeroSection() {
                         <Image
                             src="https://i.imgur.com/Wx2sPfW.png"
                             alt="Especialista em comportamento felino"
-                            width={380}
-                            height={380}
+                            width={350}
+                            height={350}
                             className="rounded-full shadow-2xl z-0"
                             data-ai-hint="cat expert"
                         />
@@ -46,8 +46,8 @@ export function HeroSection() {
                          <Image
                             src="https://i.imgur.com/W239yce.png"
                             alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
-                            width={280}
-                            height={280}
+                            width={250}
+                            height={250}
                             className="rounded-full shadow-2xl z-10 animate-subtle-bounce"
                             data-ai-hint="woman cat planner"
                             priority
