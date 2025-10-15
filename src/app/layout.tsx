@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
+import { ChatWidget } from '@/components/chat/ChatWidget';
 
 export const metadata: Metadata = {
   title: 'Purrfect Play Planner',
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
+        <ChatWidget />
       </body>
     </html>
   );
