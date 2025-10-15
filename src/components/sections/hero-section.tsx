@@ -33,7 +33,7 @@ export function HeroSection() {
                         alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
                         width={500}
                         height={500}
-                        className="rounded-lg shadow-2xl"
+                        className="rounded-lg shadow-2xl animate-subtle-bounce"
                         data-ai-hint="woman cat planner"
                         priority
                     />
