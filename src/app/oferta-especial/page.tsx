@@ -16,10 +16,12 @@ export default function BackRedirectPage() {
           </h2>
 
           <div className="text-left text-muted-foreground space-y-4 my-8 text-base md:text-lg">
-            <p>Ele te olha todo dia com aquele olhar curioso.</p>
             <p>
-              Você sabe — ele só precisa de um empurrãozinho para voltar a
-              brincar, explorar e <span className="font-semibold text-primary">ronronar de alegria.</span>
+              Ele te olha todo dia com aquele olhar curioso, esperando um
+              empurrãozinho para voltar a brincar, explorar e{' '}
+              <span className="font-semibold text-primary">
+                ronronar de alegria.
+              </span>
             </p>
             <p>
               E agora você tem a chance de transformar isso por apenas{' '}
@@ -123,8 +125,8 @@ export default function BackRedirectPage() {
             size="lg"
             className="h-auto w-full max-w-md text-lg md:text-xl py-4 bg-mint hover:bg-mint-dark text-white font-bold animate-subtle-pulse shadow-lg"
           >
-            <a href="https://pay.kiwify.com.br/iFQO80k">
-              🎯 QUERO MEU GATO FELIZ POR R$ 19,90
+            <a href="https://pay.kiwify.com.br/vn3NlpN">
+              Garantir agora
             </a>
           </Button>
 
