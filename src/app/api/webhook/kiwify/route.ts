@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     // Cenário 2: CARRINHO ABANDONADO
     else if (status === 'abandoned' && customerEmail) {
       console.log('[Kiwify] 🟨 Detectado: Carrinho Abandonado');
-      const checkoutLink = body.cart?.checkout_link ? `https://pay.kiwify.com.br/checkout/${body.cart.checkout_link}` : 'https://pay.kiwify.com.br/iFQO80k';
+      const checkoutLink = body.cart?.checkout_link ? `https://pay.kiwify.com.br/checkout/${body.cart.checkout_link}` : 'https://pay.kiwify.com.br/vn3NlpN';
       
       await sendEmail({
         to: customerEmail,
