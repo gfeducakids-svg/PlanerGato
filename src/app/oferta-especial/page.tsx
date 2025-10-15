@@ -115,10 +115,6 @@ export default function BackRedirectPage() {
            <p className="text-center italic text-lg text-gray-700 font-semibold my-8 px-4">
              ❤️ Não deixe seu gato te esperar na porta e você dizer não.
            </p>
-           
-           <p className="text-center text-muted-foreground mb-6">
-            Clique abaixo e garanta o pacote completo com todos os bônus, antes que o desconto desapareça.
-           </p>
 
           <Button
             asChild
