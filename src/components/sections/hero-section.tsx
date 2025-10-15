@@ -12,7 +12,7 @@ export function HeroSection() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-4">
                     <h1 className="text-4xl md:text-5xl font-headline leading-tight animate-fade-in-up">
-                        <span className="text-foreground">De gato que só dorme o dia todo para</span> gato que te espera <span className="text-primary inline-block animate-subtle-bounce">animado</span> na porta todo dia
+                        <span className="text-foreground">De gato que só dorme o dia todo para</span> <span className="text-primary">gato que te espera <span className="inline-block animate-subtle-bounce">animado</span> na porta todo dia</span>
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                         O Planner 30 Dias com <span className="font-bold" style={{color: '#FACC15'}}>Método Instinto Feliz 3D</span> que transforma 5 minutos em pura conexão.
