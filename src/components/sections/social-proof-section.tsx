@@ -1,3 +1,6 @@
+
+'use client';
+
 import Image from "next/image";
 import {
   Carousel,
@@ -8,6 +11,9 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay";
+
 
 // SVG Icons for Social Media
 const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -144,6 +150,10 @@ const testimonials = [
 
 
 export function SocialProofSection() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 1500, stopOnInteraction: true })
+    );
+
   return (
     <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -153,11 +163,14 @@ export function SocialProofSection() {
           </h2>
         </div>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
           }}
           className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {testimonials.map((testimonial) => (
