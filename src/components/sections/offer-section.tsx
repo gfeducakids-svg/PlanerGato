@@ -16,8 +16,8 @@ export function OfferSection() {
           </div>
 
           <div className="bg-background rounded-2xl shadow-xl p-8">
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-              {/* Coluna da Esquerda - Pacote Completo */}
+            <div className="grid grid-cols-1 gap-y-8">
+              {/* Conteúdo Principal - Pacote e Bônus */}
               <div className="space-y-4">
                 <h3 className="font-headline text-xl text-primary">PACOTE COMPLETO</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
@@ -64,8 +64,8 @@ export function OfferSection() {
                 </div>
               </div>
 
-              {/* Coluna da Direita - Preço e CTA */}
-              <div className="bg-card rounded-xl flex flex-col items-center justify-center p-8 text-center row-start-1 md:row-start-auto">
+              {/* Seção de Preço e CTA */}
+              <div className="bg-card rounded-xl flex flex-col items-center justify-center p-8 text-center mt-8">
                   <div className="w-full space-y-2">
                     <h4 className="font-headline text-lg">💰 RESUMO DO VALOR:</h4>
                     <div className="flex justify-between items-center text-muted-foreground">
