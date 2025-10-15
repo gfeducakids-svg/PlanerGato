@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Target, Puzzle, Moon, ArrowRight } from "lucide-react";
+import { Target, Puzzle, Moon } from "lucide-react";
 
 const method3d = [
     {
@@ -47,15 +46,6 @@ export function SolutionSection() {
                     <p className="mt-2 text-muted-foreground">{step.description}</p>
                 </div>
             ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <a href="#offer">
-              Começar o Desafio Instinto Feliz 3D
-              <ArrowRight className="ml-2 h-5 w-5"/>
-            </a>
-          </Button>
         </div>
       </div>
     </section>
