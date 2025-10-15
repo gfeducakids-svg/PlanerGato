@@ -149,10 +149,10 @@ export function SocialProofSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline text-primary">
-            Amado por tutores (e seus gatos)
+            Veja o que outros pais e mães de pet estão dizendo.
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Veja o que outros pais e mães de pet estão dizendo.
+            Amado por tutores (e seus gatos)
           </p>
         </div>
         <Carousel
