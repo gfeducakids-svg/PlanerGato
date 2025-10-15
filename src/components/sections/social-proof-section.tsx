@@ -151,9 +151,6 @@ export function SocialProofSection() {
           <h2 className="text-3xl md:text-4xl font-headline text-primary">
             Veja o que outros pais e mães de pet estão dizendo.
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Amado por tutores (e seus gatos)
-          </p>
         </div>
         <Carousel
           opts={{
