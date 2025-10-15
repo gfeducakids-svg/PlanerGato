@@ -15,42 +15,42 @@ const testimonials = [
   {
     id: "testimonial-1",
     name: "Juliana P.",
-    text: "Gnt meu gato n parava de dormir kkk agora corre q nem doido pela casa 😍 melhor 27,90 q gastei 🔥🔥",
+    text: "Meu gato não parava de dormir, agora corre pela casa como um foguete! O melhor investimento que fiz.",
   },
   {
     id: "testimonial-2",
     name: "Marcos V.",
-    text: "Sério mano em 1 semana meu gato ta outro bixo 😂 nunca vi ele brincar tanto ❤️❤️",
+    text: "Sério, em uma semana meu gato virou outro bicho! Nunca vi ele brincar com tanta alegria. Recomendo demais!",
   },
   {
     id: "testimonial-3",
     name: "Beatriz L.",
-    text: "Antes ele so dormia, agora me espera na porta pra brincar ❤️ coisa mais linda 😭😭",
+    text: "Antes ele só dormia, agora me espera na porta pra gente brincar. É a coisa mais linda do mundo!",
   },
   {
     id: "testimonial-4",
     name: "Fernanda C.",
-    text: "To passadaaa em 10 dias ja vi diferença 😍 nem precisa brinquedo caro véi 👏👏",
+    text: "Estou impressionada! Em 10 dias já vi uma diferença enorme. E o melhor, sem precisar de brinquedos caros.",
   },
   {
     id: "testimonial-5",
     name: "Clara M.",
-    text: "Me senti a melhor dona do mundo 😍 todo dia a gnt tem nosso momentinho",
+    text: "Me sinto a melhor dona do mundo! Todo dia a gente tem nosso momentinho especial de conexão. É incrível.",
   },
   {
     id: "testimonial-6",
     name: "Rodrigo A.",
-    text: "Achei incrível como pequenas brincadeiras diárias fizeram tanta diferença. Ele até me espera pra brincar agora ❤️",
+    text: "Achei fantástico como pequenas brincadeiras diárias fizeram tanta diferença. Ele até me espera pra brincar agora!",
   },
   {
     id: "testimonial-7",
     name: "Sonia R.",
-    text: "Meu gato é idosinho e mesmo assim ficou animado de novo. Fiquei emocionada 😭",
+    text: "Meu gato já é idoso e mesmo assim ficou super animado de novo. Fiquei até emocionada.",
   },
   {
     id: "testimonial-8",
     name: "Lucas G.",
-    text: "Comprem sem pensar! Sério, 27 reais que mudam o humor do seu gato pra sempre 🐾🔥",
+    text: "Comprem sem pensar! Sério, 27 reais que mudam o humor do seu gato para sempre. Vale cada centavo.",
   },
 ];
 

@@ -14,12 +14,14 @@ export function FinalCtaSection() {
           <Button
             asChild
             size="lg"
-            className="h-14 text-xl bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg"
+            className="h-auto py-4 text-xl bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap"
           >
-            <a href="#">Garantir o Planner por R$ 27,90 agora</a>
+            <a href="#">Quero parar de me sentir culpada e ver meu gato feliz em 7 dias</a>
           </Button>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Garantia de 7 dias sem risco.
+          <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
+            <span>✓ Acesso imediato</span>
+            <span>✓ Garantia de 7 dias</span>
+            <span>✓ Sem brinquedos caros</span>
           </p>
         </div>
       </div>

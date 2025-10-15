@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { PawPrint } from 'lucide-react';
+import { PawPrint, CheckCircle } from 'lucide-react';
 
 export function HeroSection() {
   return (
@@ -11,19 +11,23 @@ export function HeroSection() {
         <div className="container relative mx-auto px-4 md:px-6 py-12 md:py-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left space-y-6">
-                    <h1 className="text-4xl md:text-6xl font-headline leading-tight">
-                        Transforme <span className="text-primary">5 min por dia</span> no momento favorito do seu gato.
+                    <h1 className="text-4xl md:text-5xl font-headline leading-tight">
+                        Pare de se sentir uma tutora frustrada: em <span className="text-primary">7 dias</span> seu gato vai te esperar na porta com aquela carinha de "vamos brincar?"
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                        Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D, seu gato desperta o instinto de caça, gasta energia e fica mais feliz — tudo dentro da sua rotina.
+                        Com o Planner 30 Dias de Brincadeiras e o Método Instinto Feliz 3D, você vai despertar o instinto de caça dele, gastar toda a energia acumulada e criar o momento mais especial do dia de vocês — em apenas 5 minutos.
                     </p>
                     <div className="pt-4">
-                        <Button asChild size="lg" className="h-14 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg">
+                        <Button asChild size="lg" className="h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
                             <a href="#offer">
-                                Quero deixar meu gato mais feliz agora
-                                <PawPrint className="ml-2 h-5 w-5" />
+                                Quero parar de me sentir culpada e ver meu gato feliz em 7 dias
                             </a>
                         </Button>
+                         <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-1">
+                            <span>✓ Acesso imediato</span>
+                            <span>✓ Garantia de 7 dias</span>
+                            <span>✓ Sem brinquedos caros</span>
+                        </p>
                     </div>
                 </div>
 

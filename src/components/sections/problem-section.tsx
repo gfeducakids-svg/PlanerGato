@@ -2,21 +2,18 @@ import { Button } from "@/components/ui/button";
 import { BedDouble, AlertTriangle, Building2, Frown, ArrowRight } from "lucide-react";
 
 const painPoints = [
-    { icon: BedDouble, text: "Seu gato dorme o dia inteiro e parece entediado." },
-    { icon: AlertTriangle, text: "Você sente culpa por não brincar o bastante com ele." },
-    { icon: Frown, text: "Ele ignora brinquedos novos em poucos dias." },
-    { icon: Building2, text: "Mora em apartamento e acha que não há espaço para estímulo." },
+    { icon: BedDouble, text: "Você volta do trabalho animada pra brincar, mas ele nem levanta da cama." },
+    { icon: Frown, text: "Compra brinquedos novos e ele ignora em 2 dias." },
+    { icon: AlertTriangle, text: "Quer dar atenção, mas não sabe como fazer ele se interessar." },
 ]
 
 export function ProblemSection() {
   return (
     <section id="problem" className="py-12 md:py-16 bg-card">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-headline">Seu gato parece desmotivado, apático e distante?</h2>
-            <p className="text-lg text-muted-foreground">Se você se identifica com algum destes pontos, você não está sozinho. A falta de estímulo correto é a principal causa da apatia felina.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-headline">Seu gato não é apático. Ele está entediado. E você sabe disso.</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 text-left">
               {painPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-background rounded-lg shadow-sm">
                   <point.icon className="h-8 w-8 text-primary mt-1 shrink-0" />
@@ -24,14 +21,17 @@ export function ProblemSection() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="bg-background p-8 rounded-xl shadow-lg text-center space-y-6">
-            <Frown className="h-16 w-16 mx-auto text-coral"/>
-            <h3 className="text-2xl font-headline">A Consequência Silenciosa</h3>
-            <p className="text-lg text-muted-foreground">
-                Um gato entediado não é só um gato triste. É um animal que pode desenvolver estresse, ansiedade e até problemas de saúde. A boa notícia é que reverter isso é mais simples do que parece.
-            </p>
-          </div>
+             <div className="bg-background p-8 rounded-xl shadow-lg text-center space-y-4 !mt-10 max-w-3xl mx-auto">
+                <p className="text-lg text-muted-foreground">
+                    No fundo, você se pergunta: <span className="font-bold text-foreground">"Será que ele é infeliz comigo?"</span>
+                </p>
+                <p className="text-muted-foreground">
+                    A verdade é que não é culpa sua. Gatos domésticos precisam de estímulos que reproduzam o instinto natural de caça — e 90% dos tutores não sabem como fazer isso.
+                </p>
+                 <p className="font-bold text-lg text-primary">
+                    A boa notícia? Reverter esse ciclo leva menos de 5 minutos por dia.
+                </p>
+            </div>
         </div>
       </div>
     </section>

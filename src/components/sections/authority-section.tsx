@@ -14,16 +14,16 @@ export function AuthoritySection() {
             </p>
             <div className="bg-background rounded-xl p-8 shadow-lg space-y-6 !mt-10 inline-block">
                 <h3 className="font-headline text-xl text-center">Nossas Credenciais</h3>
-                <div className="flex flex-col sm:flex-row gap-8 justify-around">
+                <div className="flex flex-col sm:flex-row gap-8 justify-around items-center">
                     <div className="text-center">
                         <PawPrint className="mx-auto h-10 w-10 text-secondary mb-2"/>
                         <p className="font-bold text-lg">Comportamentalistas Felinos</p>
                         <p className="text-sm text-muted-foreground">Equipe dedicada ao bem-estar dos gatos.</p>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center max-w-xs">
                         <div className="text-4xl font-headline text-secondary mb-1">300+</div>
-                        <p className="font-bold text-lg">Gatos Domésticos</p>
-                        <p className="text-sm text-muted-foreground">Método testado e aprovado.</p>
+                        <p className="font-bold text-lg">Gatos Testados</p>
+                        <p className="text-sm text-muted-foreground">Testado com 300+ gatos em 6 meses de estudos de comportamento.</p>
                     </div>
                 </div>
             </div>

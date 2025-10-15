@@ -37,8 +37,8 @@ export function OfferSection() {
                 <div className="flex items-start gap-3">
                     <Gift className="h-5 w-5 text-primary mt-1 shrink-0" />
                     <div>
-                        <h4 className="font-bold text-primary">BÔNUS ESPECIAL</h4>
-                        <p className="text-sm text-muted-foreground">Guia "Rituais Noturnos para Relaxar seu Gato".</p>
+                        <h4 className="font-bold text-primary">BÔNUS: Guia 'Relaxamento Noturno' para gatos agitados</h4>
+                        <p className="text-sm text-muted-foreground">(valor R$ 19,90)</p>
                     </div>
                 </div>
               </div>
@@ -50,8 +50,8 @@ export function OfferSection() {
                 <div className="bg-secondary text-secondary-foreground font-bold text-sm px-3 py-1 rounded-full">
                     ECONOMIA DE 65%
                 </div>
-                <Button asChild size="lg" className="w-full mt-8 h-12 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg">
-                    <a href="#">Garantir meu Planner por R$ 27,90</a>
+                <Button asChild size="lg" className="w-full mt-8 h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
+                    <a href="#">Quero parar de me sentir culpada e ver meu gato feliz em 7 dias</a>
                 </Button>
                 <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-muted-foreground">
                     <div className="flex items-center gap-2 text-xs">

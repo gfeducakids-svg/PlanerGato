@@ -6,18 +6,16 @@ export function UrgencySection() {
     <section className="bg-gradient-to-br from-primary via-coral to-secondary py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6 text-center text-white">
         <h2 className="text-2xl md:text-4xl font-headline">
-          Oferta disponível por tempo <span className="underline decoration-wavy">limitado</span>!
+          Última chance de pegar por R$ 27,90
         </h2>
         <p className="mt-3 max-w-2xl mx-auto text-lg text-white/90">
-          O preço promocional de R$ 27,90 volta para R$ 79,00 em:
+          Centenas de tutoras já começaram o desafio hoje. Cada dia que você adia é mais um dia de tédio para o seu gato (e mais culpa pra você carregar).
         </p>
+        <p className="mt-4 text-lg text-white/90">O preço volta para R$ 79,00 em:</p>
         <div className="my-8 flex justify-center">
             <CountdownTimer />
         </div>
-        <div className="flex items-center justify-center gap-2 text-sm bg-black/20 max-w-md mx-auto p-2 rounded-lg">
-            <AlertCircle className="h-4 w-4 shrink-0" />
-            <p>Este é um contador real. Após o prazo, o desconto expira automaticamente.</p>
-        </div>
+        <p className="font-highlight text-lg">Não deixe para depois. Ele merece. Você merece.</p>
       </div>
     </section>
   );
