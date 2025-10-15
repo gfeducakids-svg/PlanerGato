@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { PawPrint } from 'lucide-react';
 
 export function HeroSection() {
-  const plannerImage = PlaceHolderImages.find((img) => img.id === 'planner-image');
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-image');
-
   return (
     <section className="relative bg-background overflow-hidden">
         <div className="absolute -bottom-1/3 -right-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl" />
@@ -32,28 +28,15 @@ export function HeroSection() {
                 </div>
 
                 <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
-                    {heroImage && (
-                        <Image
-                            src={heroImage.imageUrl}
-                            alt="Tutora sorrindo com seu gato"
-                            fill
-                            className="object-cover rounded-full aspect-square shadow-2xl"
-                            data-ai-hint={heroImage.imageHint}
-                            priority
-                        />
-                    )}
-                    {plannerImage && (
-                        <div className="absolute -bottom-8 -right-8 md:bottom-0 md:-right-10 w-[180px] h-[240px] lg:w-[220px] lg:h-[293px] animate-subtle-bounce">
-                        <Image
-                            src={plannerImage.imageUrl}
-                            alt="Planner 30 Dias de Brincadeiras"
-                            width={220}
-                            height={293}
-                            className="rounded-lg shadow-2xl transform rotate-12 border-4 border-white"
-                            data-ai-hint={plannerImage.imageHint}
-                        />
-                        </div>
-                    )}
+                    <Image
+                        src="https://i.imgur.com/W239yce.png"
+                        alt="Tutora sorrindo com seu gato e o planner de brincadeiras"
+                        width={500}
+                        height={500}
+                        className="rounded-lg shadow-2xl"
+                        data-ai-hint="woman cat planner"
+                        priority
+                    />
                 </div>
             </div>
         </div>
