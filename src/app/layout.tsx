@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { ChatWidget } from '@/components/chat/ChatWidget';
@@ -26,6 +27,24 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@600&family=Poppins:wght@700&display=swap"
           rel="stylesheet"
         />
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.pixelId = "68f05a365a032e52472e8472";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          async
+          defer
+          strategy="afterInteractive"
+        ></Script>
       </head>
       <body className="font-body antialiased">
         {children}
