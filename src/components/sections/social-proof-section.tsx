@@ -49,7 +49,6 @@ export function SocialProofSection() {
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
 
   const handleVideoEnded = useCallback(() => {
     api?.scrollNext();
@@ -95,17 +94,9 @@ export function SocialProofSection() {
       // Reset play states
       setIsPlaying(Array(videoTestimonials.length).fill(false));
       setIsMuted(Array(videoTestimonials.length).fill(true));
-      
-      // Autoplay the current video
-      const currentVideo = videoRefs.current[api.selectedScrollSnap()];
-      currentVideo?.play();
     };
 
     api.on('select', onSelect);
-
-    // Initial play
-    const initialVideo = videoRefs.current[0];
-    initialVideo?.play();
 
     return () => {
       api.off('select', onSelect);
@@ -125,14 +116,11 @@ export function SocialProofSection() {
         </div>
         <Carousel
           setApi={setApi}
-          plugins={[plugin.current]}
           opts={{
             align: 'start',
             loop: true,
           }}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {videoTestimonials.map((testimonial, index) => (
