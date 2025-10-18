@@ -19,7 +19,7 @@ export function HeroSection() {
                     </p>
                      <div className="flex justify-center lg:justify-start">
                         <Button asChild size="lg" className="w-full max-w-xs h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
-                            <a href="https://pay.kiwify.com.br/iFQO80k">Quero meu gato mais feliz</a>
+                            <a href="#offer">Quero meu gato mais feliz</a>
                         </Button>
                     </div>
                 </div>
