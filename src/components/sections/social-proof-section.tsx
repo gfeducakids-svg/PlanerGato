@@ -18,22 +18,22 @@ const videoTestimonials = [
   {
     id: 'video-1',
     src: 'https://i.imgur.com/4d1OaKx.mp4',
-    poster: 'https://i.imgur.com/JnYAzeu.png', // Optional: Poster image
+    poster: 'https://i.imgur.com/f78eA9h.png', // Depoimento real
   },
   {
     id: 'video-2',
     src: 'https://i.imgur.com/iixMVKv.mp4',
-    poster: 'https://i.imgur.com/jeIcjcS.png', // Optional: Poster image
+    poster: 'https://i.imgur.com/j4YyF6A.png', // Depoimento real
   },
   {
     id: 'video-3',
     src: 'https://i.imgur.com/z9LJNfz.mp4',
-    poster: 'https://i.imgur.com/JnYAzeu.png', // Optional: Poster image
+    poster: 'https://i.imgur.com/OExi7O2.png', // Depoimento real
   },
   {
     id: 'video-4',
     src: 'https://i.imgur.com/FEEoaKu.mp4',
-    poster: 'https://i.imgur.com/jeIcjcS.png', // Optional: Poster image
+    poster: 'https://i.imgur.com/iBwZzP0.png', // Depoimento real
   },
 ];
 
@@ -58,13 +58,20 @@ export function SocialProofSection() {
     const video = videoRefs.current[index];
     if (video) {
         if (video.paused) {
-            video.play();
-            const newIsPlaying = [...isPlaying];
+            // Pause all other videos before playing the new one
+            videoRefs.current.forEach((v, i) => {
+                if (i !== index) {
+                    v?.pause();
+                }
+            });
+            const newIsPlaying = Array(videoTestimonials.length).fill(false);
             newIsPlaying[index] = true;
             setIsPlaying(newIsPlaying);
             
+            video.play();
+            
             const newIsMuted = [...isMuted];
-            newIsMuted[index] = false;
+            newIsMuted[index] = false; // Unmute when user clicks to play
             setIsMuted(newIsMuted);
 
         } else {
@@ -89,9 +96,9 @@ export function SocialProofSection() {
 
     const onSelect = () => {
       setCurrent(api.selectedScrollSnap());
-      // Pause all videos
+      // Pause all videos when carousel navigates
       videoRefs.current.forEach((video) => video?.pause());
-      // Reset play states
+      // Reset play and mute states
       setIsPlaying(Array(videoTestimonials.length).fill(false));
       setIsMuted(Array(videoTestimonials.length).fill(true));
     };
@@ -130,7 +137,7 @@ export function SocialProofSection() {
               >
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col overflow-hidden">
-                    <CardContent className="p-0 relative aspect-video flex items-center justify-center bg-black">
+                    <CardContent className="p-0 relative aspect-[9/16] flex items-center justify-center bg-black">
                       <video
                         ref={(el) => (videoRefs.current[index] = el)}
                         src={testimonial.src}
