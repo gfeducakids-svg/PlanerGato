@@ -1,171 +1,133 @@
 
 'use client';
 
-import Image from "next/image";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
-import React from "react";
-import Autoplay from "embla-carousel-autoplay";
+  type CarouselApi,
+} from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
+import { PlayCircle, Volume2, VolumeX } from 'lucide-react';
+import Autoplay from 'embla-carousel-autoplay';
 
-
-// SVG Icons for Social Media
-const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-    </svg>
-);
-
-const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
-        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.78.46 3.45 1.28 4.95L2 22l5.25-1.38c1.45.77 3.06 1.23 4.79 1.23h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.9-9.91-9.9zM17.2 14.2c-.22-.11-.76-.38-1.04-.51s-.41-.11-.58.11-.39.51-.48.62-.18.12-.33.04-.66-.24-1.26-.78-1.04-1.01-1.16-1.18-.05-.18.06-.29-.11-.14-.24-.24-.18-.11-.25-.11-.17 0-.25 0-.41-.01-.58-.01s-.41-.06-.58-.33c-.17-.28-.76-.76-1.04-1.04s-.56-.22-.76-.22-.36 0-.5.01-.28.04-.41.04-.28.18-.41.39-.41.87-.41 1.04 0 .17.06.28.28.28.41.39.53.53.66.69.13.17.22.28.3.41.08.14.03.25-.03.36s-.22.2-.3.28-.17.14-.25.22c-.08.08-.17.17-.25.25s-.14.14-.22.22c-.08.08-.17.17-.25.25s-.14.14-.22.22c-.5.5-.89.81-1.17 1.09s-.5.5-.69.78c-.18.28-.36.56-.53.83s-.33.56-.47.83c-.14.28-.28.56-.41.83s-.22.56-.3.83c-.08.28-.17.56-.25.83s-.14.56-.22.83c-.08.28-.17.56-.25.83s-.14.56-.22.83c-1.11 3.11.44 6.13 1.22 7 .78.87 1.83 1.36 2.89 1.36h.01c1.73 0 3.36-.61 4.69-1.66l.14-.11c.19-.16.36-.33.5-.5.14-.17.28-.33.39-.5.11-.17.22-.33.3-.5.08-.17.17-.33.22-.5.05-.17.11-.33.14-.5.03-.17.06-.33.08-.5.02-.17.03-.33.03-.5s0-.28-.01-.41c0-.14 0-.28-.01-.41s0-.25-.01-.39c0-.14 0-.28-.01-.41s0-.25-.01-.39c0-.14 0-.28-.01-.41z"></path>
-    </svg>
-);
-
-
-const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
-        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-1.5c-1.38 0-1.5 0.62-1.5 1.5V12h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"></path>
-    </svg>
-);
-
-
-const SocialIcon = ({ network, className }: { network: string; className?: string }) => {
-  switch (network) {
-    case "instagram":
-      return <InstagramIcon className={className} />;
-    case "whatsapp":
-      return <WhatsAppIcon className={className} />;
-    case "facebook":
-      return <FacebookIcon className={className} />;
-    default:
-      return null;
-  }
-};
-
-const testimonials = [
-  // Instagram
+const videoTestimonials = [
   {
-    id: "testimonial-insta-1",
-    name: "@julianamcervantes",
-    text: "Gentem mudou tudo meu gato só dormia e agora corre pela casa igual foguete 😂🔥 melhores 27,90 que já gastei!",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/csTU30S.png",
+    id: 'video-1',
+    src: 'https://i.imgur.com/4d1OaKx.mp4',
+    poster: 'https://i.imgur.com/JnYAzeu.png', // Optional: Poster image
   },
   {
-    id: "testimonial-insta-2",
-    name: "@marcosvbusiness",
-    text: "Sério, em uma semana o Thor virou OUTRO gato nunca vi ele brincar com tanta alegria recomendo demais !",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/ykX7yRT.png",
+    id: 'video-2',
+    src: 'https://i.imgur.com/iixMVKv.mp4',
+    poster: 'https://i.imgur.com/jeIcjcS.png', // Optional: Poster image
   },
   {
-    id: "testimonial-insta-3",
-    name: "@beatrizluna",
-    text: "Antes ele só dormia agora me espera na porta pra brincar comigo 😍 coisa mais linda do mundo. 🐾❤️",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/eaV3Rz0.png",
-  },
-   {
-    id: "testimonial-insta-4",
-    name: "@fernanda_ama_gatos",
-    text: "To impressionada! Em 10 dias já vi muita diferença 😍 e sem brinquedo caro, só usando o planner 😍😍😍",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/ZgQd7bj.png",
-  },
-   {
-    id: "testimonial-insta-5",
-    name: "@claramendes.g",
-    text: "Me sinto a melhor dona do mundo  todo dia a gente tem nosso momentinho especial 💕 obrigadaa planerrrrr 💖",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/049TDDK.png",
-  },
-   {
-    id: "testimonial-insta-6",
-    name: "@lucas_gpet",
-    text: "Comprem sem pensar! 😂 sério, 27 reais que mudam o humor do gato pra sempre!!!!",
-    network: "instagram",
-    avatarUrl: "https://i.imgur.com/EwpHLBf.png",
-  },
-  // WhatsApp
-  {
-    id: "testimonial-wpp-1",
-    name: "Fernanda C.",
-    text: "amg vc n acredita kkkk em 10 dias meu gato virou outro 😍 e o melhor, nem precisei comprar brinquedo caro rsrs ❤️",
-    network: "whatsapp",
-    avatarUrl: "https://i.imgur.com/3iBL5cd.png",
+    id: 'video-3',
+    src: 'https://i.imgur.com/z9LJNfz.mp4',
+    poster: 'https://i.imgur.com/JnYAzeu.png', // Optional: Poster image
   },
   {
-    id: "testimonial-wpp-2",
-    name: "Clara M.",
-    text: "aqui em casa ta demais kkk todo dia ele vem me chamar pra brincar 🤣 to mt feliz, virou rotina ja ❤️",
-    network: "whatsapp",
-    avatarUrl: "https://i.imgur.com/jEitktN.png",
-  },
-  {
-    id: "testimonial-wpp-3",
-    name: "Sonia R.",
-    text: "meu gato ja ta velhinho e msm assim ficou todo animado 😭 fiquei emocionada, valeu cada centavo 🥹❤️",
-    network: "whatsapp",
-    avatarUrl: "https://i.imgur.com/nmFpQ8x.png",
-  },
-   {
-    id: "testimonial-wpp-4",
-    name: "Marcos V.",
-    text: "usei achando q n ia mudar nada mas cara... em uma semana ele ta correndo e brincando igual filhote",
-    network: "whatsapp",
-    avatarUrl: "https://i.imgur.com/XRUtzqz.png",
-  },
-  // Facebook
-  {
-    id: "testimonial-fb-1",
-    name: "Juliana P.",
-    text: "Meu gato não parava de dormir, agora corre pela casa como um foguete! O melhor investimento que já fiz pra ele ❤️ vale cada minuto e cada centavo!",
-    network: "facebook",
-    avatarUrl: "https://i.imgur.com/xlpLSBc.png",
-  },
-  {
-    id: "testimonial-fb-2",
-    name: "Rodrigo A.",
-    text: "Fantástico como pequenas brincadeiras diárias fazem tanta diferença. Ele até me espera pra brincar agora! A energia dele mudou completamente 👏",
-    network: "facebook",
-    avatarUrl: "https://i.imgur.com/M3rwlhl.jpeg",
-  },
-  {
-    id: "testimonial-fb-3",
-    name: "Beatriz L.",
-    text: "Antes ele só dormia, agora me espera na porta pra brincar. É lindo ver ele feliz de novo 🥰 recomendo demais pra quem tem gato preguiçoso!",
-    network: "facebook",
-    avatarUrl: "https://i.imgur.com/Dxpt2qx.png",
+    id: 'video-4',
+    src: 'https://i.imgur.com/FEEoaKu.mp4',
+    poster: 'https://i.imgur.com/jeIcjcS.png', // Optional: Poster image
   },
 ];
 
-
 export function SocialProofSection() {
-    const plugin = React.useRef(
-        Autoplay({ delay: 1500, stopOnInteraction: true })
-    );
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [isPlaying, setIsPlaying] = useState<boolean[]>(
+    Array(videoTestimonials.length).fill(false)
+  );
+  const [isMuted, setIsMuted] = useState<boolean[]>(
+    Array(videoTestimonials.length).fill(true)
+  );
+
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
+
+  const handleVideoEnded = useCallback(() => {
+    api?.scrollNext();
+  }, [api]);
+
+  const togglePlay = (index: number) => {
+    const video = videoRefs.current[index];
+    if (video) {
+        if (video.paused) {
+            video.play();
+            const newIsPlaying = [...isPlaying];
+            newIsPlaying[index] = true;
+            setIsPlaying(newIsPlaying);
+            
+            const newIsMuted = [...isMuted];
+            newIsMuted[index] = false;
+            setIsMuted(newIsMuted);
+
+        } else {
+            video.pause();
+            const newIsPlaying = [...isPlaying];
+            newIsPlaying[index] = false;
+            setIsPlaying(newIsPlaying);
+        }
+    }
+  };
+
+  const toggleMute = (index: number) => {
+      const newIsMuted = [...isMuted];
+      newIsMuted[index] = !newIsMuted[index];
+      setIsMuted(newIsMuted);
+  }
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+      // Pause all videos
+      videoRefs.current.forEach((video) => video?.pause());
+      // Reset play states
+      setIsPlaying(Array(videoTestimonials.length).fill(false));
+      setIsMuted(Array(videoTestimonials.length).fill(true));
+      
+      // Autoplay the current video
+      const currentVideo = videoRefs.current[api.selectedScrollSnap()];
+      currentVideo?.play();
+    };
+
+    api.on('select', onSelect);
+
+    // Initial play
+    const initialVideo = videoRefs.current[0];
+    initialVideo?.play();
+
+    return () => {
+      api.off('select', onSelect);
+    };
+  }, [api]);
 
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-headline text-primary">
-            Veja o que outros pais e mães de pet estão dizendo.
+            A transformação na prática: Gatos reais, resultados reais.
           </h2>
+          <p className="mt-3 text-lg text-muted-foreground">
+            Veja como o dia a dia de outros gatos mudou completamente.
+          </p>
         </div>
         <Carousel
+          setApi={setApi}
           plugins={[plugin.current]}
           opts={{
-            align: "start",
+            align: 'start',
             loop: true,
           }}
           className="w-full"
@@ -173,38 +135,46 @@ export function SocialProofSection() {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
-            {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col">
-                      <CardContent className="flex flex-col flex-grow justify-between p-6">
-                        <div>
-                          <div className="flex items-center mb-4">
-                            <Image
-                                src={testimonial.avatarUrl}
-                                alt={`Avatar de ${testimonial.name}`}
-                                width={48}
-                                height={48}
-                                data-ai-hint="person avatar"
-                                className="rounded-full"
-                              />
-                            <div className="ml-4">
-                              <p className="font-bold text-sm">{testimonial.name}</p>
-                              <div className="flex text-secondary mt-1">
-                                {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
-                              </div>
-                            </div>
-                            <SocialIcon network={testimonial.network} className="ml-auto h-5 w-5 text-muted-foreground" />
-                          </div>
-                          <p className={`text-muted-foreground font-highlight italic ${testimonial.network === 'whatsapp' ? 'text-base' : 'text-sm'}`}>
-                            "{testimonial.text}"
-                          </p>
+            {videoTestimonials.map((testimonial, index) => (
+              <CarouselItem
+                key={testimonial.id}
+                className="md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="p-1 h-full">
+                  <Card className="h-full flex flex-col overflow-hidden">
+                    <CardContent className="p-0 relative aspect-video flex items-center justify-center bg-black">
+                      <video
+                        ref={(el) => (videoRefs.current[index] = el)}
+                        src={testimonial.src}
+                        poster={testimonial.poster}
+                        muted={isMuted[index]}
+                        playsInline
+                        loop={false}
+                        onEnded={handleVideoEnded}
+                        className="w-full h-full object-cover"
+                      />
+                      {!isPlaying[index] && (
+                        <div
+                          className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 cursor-pointer group"
+                          onClick={() => togglePlay(index)}
+                        >
+                          <PlayCircle className="h-16 w-16 text-white/80 group-hover:text-white transition-colors" />
+                          <p className="text-white font-bold mt-2">Clique para assistir</p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
+                      )}
+                       {isPlaying[index] && (
+                        <button 
+                            onClick={() => toggleMute(index)} 
+                            className="absolute bottom-2 right-2 bg-black/50 p-2 rounded-full text-white hover:bg-black/75 transition-colors z-10"
+                        >
+                            {isMuted[index] ? <VolumeX className="h-5 w-5"/> : <Volume2 className="h-5 w-5"/>}
+                        </button>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselNext className="hidden sm:flex" />
