@@ -18,28 +18,27 @@ const videoTestimonials = [
   {
     id: 'video-1',
     src: 'https://i.imgur.com/4d1OaKx.mp4',
-    poster: 'https://i.imgur.com/f78eA9h.png', // Depoimento real
+    poster: 'https://i.imgur.com/f78eA9h.png',
   },
   {
     id: 'video-2',
     src: 'https://i.imgur.com/iixMVKv.mp4',
-    poster: 'https://i.imgur.com/j4YyF6A.png', // Depoimento real
+    poster: 'https://i.imgur.com/j4YyF6A.png',
   },
   {
     id: 'video-3',
     src: 'https://i.imgur.com/z9LJNfz.mp4',
-    poster: 'https://i.imgur.com/OExi7O2.png', // Depoimento real
+    poster: 'https://i.imgur.com/OExi7O2.png',
   },
   {
     id: 'video-4',
     src: 'https://i.imgur.com/FEEoaKu.mp4',
-    poster: 'https://i.imgur.com/iBwZzP0.png', // Depoimento real
+    poster: 'https://i.imgur.com/iBwZzP0.png',
   },
 ];
 
 export function SocialProofSection() {
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
     Array(videoTestimonials.length).fill(false)
   );
@@ -50,11 +49,15 @@ export function SocialProofSection() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const autoplayPlugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
 
   const handleVideoEnded = useCallback(() => {
-    api?.scrollNext();
+    if (api) {
+        api.scrollNext();
+        // Reset autoplay when a video finishes and we manually go to the next slide
+        autoplayPlugin.current.reset();
+    }
   }, [api]);
 
   const togglePlay = (index: number) => {
@@ -63,27 +66,27 @@ export function SocialProofSection() {
         if (video.paused) {
             // Pause all other videos before playing the new one
             videoRefs.current.forEach((v, i) => {
-                if (i !== index) {
-                    v?.pause();
+                if (v && i !== index) {
+                    v.pause();
                 }
             });
+            
+            // Set playing state
             const newIsPlaying = Array(videoTestimonials.length).fill(false);
             newIsPlaying[index] = true;
             setIsPlaying(newIsPlaying);
             
-            video.play();
-            autoplayPlugin.current.stop();
-            
+            // Unmute and play
             const newIsMuted = [...isMuted];
-            newIsMuted[index] = false; // Unmute when user clicks to play
+            newIsMuted[index] = false;
             setIsMuted(newIsMuted);
+            video.play();
+            
+            // Stop carousel autoplay when a video is manually played
+            autoplayPlugin.current.stop();
 
         } else {
             video.pause();
-            const newIsPlaying = [...isPlaying];
-            newIsPlaying[index] = false;
-            setIsPlaying(newIsPlaying);
-            autoplayPlugin.current.play();
         }
     }
   };
@@ -100,12 +103,16 @@ export function SocialProofSection() {
     }
 
     const onSelect = () => {
-      setCurrent(api.selectedScrollSnap());
       // Pause all videos when carousel navigates
-      videoRefs.current.forEach((video) => video?.pause());
+      videoRefs.current.forEach((video) => {
+        if (video && !video.paused) {
+          video.pause();
+        }
+      });
       // Reset play and mute states
       setIsPlaying(Array(videoTestimonials.length).fill(false));
-      setIsMuted(Array(videoTestimonials.length).fill(true));
+      // Keep mute state as is, don't reset it
+      // setIsMuted(Array(videoTestimonials.length).fill(true));
       autoplayPlugin.current.reset();
     };
 
@@ -152,6 +159,18 @@ export function SocialProofSection() {
                         muted={isMuted[index]}
                         playsInline
                         loop={false}
+                        onPlay={() => {
+                            const newIsPlaying = Array(videoTestimonials.length).fill(false);
+                            newIsPlaying[index] = true;
+                            setIsPlaying(newIsPlaying);
+                            autoplayPlugin.current.stop();
+                        }}
+                        onPause={() => {
+                             const newIsPlaying = [...isPlaying];
+                            newIsPlaying[index] = false;
+                            setIsPlaying(newIsPlaying);
+                            autoplayPlugin.current.play();
+                        }}
                         onEnded={handleVideoEnded}
                         className="w-full h-full object-cover"
                       />
