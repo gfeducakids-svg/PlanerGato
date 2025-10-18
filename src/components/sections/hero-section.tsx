@@ -23,11 +23,6 @@ export function HeroSection() {
                                 Quero experimentar
                             </a>
                         </Button>
-                         <p className="mt-4 text-sm text-muted-foreground flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-1">
-                            <span>✓ Acesso imediato</span>
-                             <span className="hidden sm:inline">|</span>
-                            <span>✓ Sem brinquedos caros</span>
-                        </p>
                     </div>
                 </div>
 
