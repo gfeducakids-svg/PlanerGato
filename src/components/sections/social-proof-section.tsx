@@ -11,7 +11,7 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlayCircle, Volume2, VolumeX } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const videoTestimonials = [
@@ -42,9 +42,6 @@ export function SocialProofSection() {
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
     Array(videoTestimonials.length).fill(false)
   );
-  const [isMuted, setIsMuted] = useState<boolean[]>(
-    Array(videoTestimonials.length).fill(true)
-  );
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
@@ -55,7 +52,6 @@ export function SocialProofSection() {
   const handleVideoEnded = useCallback(() => {
     if (api) {
         api.scrollNext();
-        // Reset autoplay when a video finishes and we manually go to the next slide
         autoplayPlugin.current.reset();
     }
   }, [api]);
@@ -63,39 +59,31 @@ export function SocialProofSection() {
   const togglePlay = (index: number) => {
     const video = videoRefs.current[index];
     if (video) {
-        if (video.paused) {
-            // Pause all other videos before playing the new one
-            videoRefs.current.forEach((v, i) => {
-                if (v && i !== index) {
-                    v.pause();
-                }
-            });
-            
-            // Set playing state
-            const newIsPlaying = Array(videoTestimonials.length).fill(false);
-            newIsPlaying[index] = true;
-            setIsPlaying(newIsPlaying);
-            
-            // Unmute and play
-            const newIsMuted = [...isMuted];
-            newIsMuted[index] = false;
-            setIsMuted(newIsMuted);
-            video.play();
-            
-            // Stop carousel autoplay when a video is manually played
-            autoplayPlugin.current.stop();
+      if (video.paused) {
+        videoRefs.current.forEach((v, i) => {
+          if (v && i !== index) {
+            v.pause();
+            v.controls = false; 
+            const newIsPlayingState = Array(videoTestimonials.length).fill(false);
+            newIsPlayingState[i] = false;
+            setIsPlaying(newIsPlayingState);
+          }
+        });
 
-        } else {
-            video.pause();
-        }
+        const newIsPlaying = Array(videoTestimonials.length).fill(false);
+        newIsPlaying[index] = true;
+        setIsPlaying(newIsPlaying);
+
+        video.muted = false;
+        video.play();
+        video.controls = true;
+        autoplayPlugin.current.stop();
+      } else {
+        video.pause();
+        video.controls = false;
+      }
     }
   };
-
-  const toggleMute = (index: number) => {
-      const newIsMuted = [...isMuted];
-      newIsMuted[index] = !newIsMuted[index];
-      setIsMuted(newIsMuted);
-  }
 
   useEffect(() => {
     if (!api) {
@@ -103,16 +91,13 @@ export function SocialProofSection() {
     }
 
     const onSelect = () => {
-      // Pause all videos when carousel navigates
-      videoRefs.current.forEach((video) => {
+      videoRefs.current.forEach((video, index) => {
         if (video && !video.paused) {
           video.pause();
+          video.controls = false;
         }
       });
-      // Reset play and mute states
       setIsPlaying(Array(videoTestimonials.length).fill(false));
-      // Keep mute state as is, don't reset it
-      // setIsMuted(Array(videoTestimonials.length).fill(true));
       autoplayPlugin.current.reset();
     };
 
@@ -156,20 +141,23 @@ export function SocialProofSection() {
                         ref={(el) => (videoRefs.current[index] = el)}
                         src={testimonial.src}
                         poster={testimonial.poster}
-                        muted={isMuted[index]}
                         playsInline
                         loop={false}
+                        muted
                         onPlay={() => {
-                            const newIsPlaying = Array(videoTestimonials.length).fill(false);
-                            newIsPlaying[index] = true;
-                            setIsPlaying(newIsPlaying);
-                            autoplayPlugin.current.stop();
+                          const newIsPlaying = Array(videoTestimonials.length).fill(false);
+                          newIsPlaying[index] = true;
+                          setIsPlaying(newIsPlaying);
+                          autoplayPlugin.current.stop();
                         }}
                         onPause={() => {
-                             const newIsPlaying = [...isPlaying];
-                            newIsPlaying[index] = false;
-                            setIsPlaying(newIsPlaying);
-                            autoplayPlugin.current.play();
+                          const newIsPlaying = [...isPlaying];
+                          newIsPlaying[index] = false;
+                          setIsPlaying(newIsPlaying);
+                          if(videoRefs.current[index]) {
+                            videoRefs.current[index]!.controls = false;
+                          }
+                          autoplayPlugin.current.play();
                         }}
                         onEnded={handleVideoEnded}
                         className="w-full h-full object-cover"
@@ -182,14 +170,6 @@ export function SocialProofSection() {
                           <PlayCircle className="h-16 w-16 text-white/80 group-hover:text-white transition-colors" />
                           <p className="text-white font-bold mt-2">Clique para assistir</p>
                         </div>
-                      )}
-                       {isPlaying[index] && (
-                        <button 
-                            onClick={() => toggleMute(index)} 
-                            className="absolute bottom-2 right-2 bg-black/50 p-2 rounded-full text-white hover:bg-black/75 transition-colors z-10"
-                        >
-                            {isMuted[index] ? <VolumeX className="h-5 w-5"/> : <Volume2 className="h-5 w-5"/>}
-                        </button>
                       )}
                     </CardContent>
                   </Card>
