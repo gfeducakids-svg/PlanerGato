@@ -42,6 +42,7 @@ export function HeroSection() {
                             fill
                             className="rounded-full shadow-2xl z-10 animate-subtle-bounce object-cover"
                             data-ai-hint="woman cat planner"
+                            priority
                         />
                     </div>
                 </div>

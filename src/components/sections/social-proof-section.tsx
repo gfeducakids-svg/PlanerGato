@@ -149,6 +149,7 @@ export function SocialProofSection() {
                         playsInline
                         loop={false}
                         muted
+                        preload="metadata"
                         onPlay={() => {
                           const newIsPlaying = Array(videoTestimonials.length).fill(false);
                           newIsPlaying[index] = true;

@@ -27,6 +27,17 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Nunito:wght@600&family=Poppins:wght@700&display=swap"
           rel="stylesheet"
         />
+        {/* Preload Hero Images */}
+        <link rel="preload" href="https://i.imgur.com/Wx2sPfW.png" as="image" />
+        <link rel="preload" href="https://i.imgur.com/W239yce.png" as="image" />
+        
+        {/* Preload Video Posters */}
+        <link rel="preload" href="https://i.imgur.com/zB6nu2h.png" as="image" />
+        <link rel="preload" href="https://i.imgur.com/D6QBwR8.png" as="image" />
+        <link rel="preload" href="https://i.imgur.com/wEMRe1d.png" as="image" />
+        <link rel="preload" href="https://i.imgur.com/iysGgAt.png" as="image" />
+        <link rel="preload" href="https://i.imgur.com/D6UwpFg.png" as="image" />
+
         <Script id="utmify-pixel" strategy="afterInteractive">
           {`
             window.pixelId = "68f05a365a032e52472e8472";
