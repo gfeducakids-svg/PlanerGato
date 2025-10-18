@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { MessageSquare } from "lucide-react";
 
 const faqs = [
   {
@@ -54,6 +55,13 @@ export function FaqSection() {
             </AccordionItem>
           ))}
         </Accordion>
+
+        <div className="mt-12 text-center bg-background p-6 rounded-lg shadow-sm">
+            <MessageSquare className="h-8 w-8 text-primary mx-auto mb-4" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Se ficou com alguma dúvida, quer contar como seu gato está reagindo ou só precisa de um empurrãozinho para começar, fala com a gente no chat! É só clicar nesse botãozinho laranja no canto da tela.
+            </p>
+        </div>
       </div>
     </section>
   );
