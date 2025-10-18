@@ -1,6 +1,5 @@
 import { AuthoritySection } from '@/components/sections/authority-section';
 import { FaqSection } from '@/components/sections/faq-section';
-import { FinalCtaSection } from '@/components/sections/final-cta-section';
 import { Footer } from '@/components/sections/footer';
 import { GuaranteeSection } from '@/components/sections/guarantee-section';
 import { HeroSection } from '@/components/sections/hero-section';
@@ -21,7 +20,6 @@ export default function Home() {
         <UrgencySection />
         <GuaranteeSection />
         <FaqSection />
-        <FinalCtaSection />
       </main>
       <Footer />
     </div>
