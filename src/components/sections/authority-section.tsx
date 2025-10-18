@@ -6,12 +6,12 @@ export function AuthoritySection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="space-y-6 text-center">
-            <p className="text-lg text-muted-foreground font-highlight max-w-3xl mx-auto">
-              Depois de observar dezenas de tutoras frustradas, criamos o Método Instinto Feliz 3D — inspirado no comportamento natural dos felinos. Cada brincadeira segue o ritmo biológico da caça, garantindo equilíbrio físico e emocional.
-            </p>
             <div className="bg-background rounded-xl p-8 shadow-lg space-y-6 !mt-10 inline-block">
                 <h3 className="font-headline text-xl text-center">Nossas Credenciais</h3>
-                <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-center items-center">
+                <p className="text-lg text-muted-foreground font-highlight max-w-3xl mx-auto">
+                    Depois de observar dezenas de tutoras frustradas, criamos o Método Instinto Feliz 3D — inspirado no comportamento natural dos felinos. Cada brincadeira segue o ritmo biológico da caça, garantindo equilíbrio físico e emocional.
+                </p>
+                <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-center items-center pt-4">
                     <div className="text-center max-w-xs">
                         <PawPrint className="mx-auto h-10 w-10 text-secondary mb-2"/>
                         <p className="font-bold text-lg">Especialistas em Comportamento Felino</p>
