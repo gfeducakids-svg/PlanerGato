@@ -18,22 +18,27 @@ const videoTestimonials = [
   {
     id: 'video-1',
     src: 'https://i.imgur.com/4d1OaKx.mp4',
-    poster: 'https://i.imgur.com/f78eA9h.png',
+    poster: 'https://i.imgur.com/zB6nu2h.png',
   },
   {
     id: 'video-2',
     src: 'https://i.imgur.com/iixMVKv.mp4',
-    poster: 'https://i.imgur.com/j4YyF6A.png',
+    poster: 'https://i.imgur.com/D6QBwR8.png',
   },
   {
     id: 'video-3',
     src: 'https://i.imgur.com/z9LJNfz.mp4',
-    poster: 'https://i.imgur.com/OExi7O2.png',
+    poster: 'https://i.imgur.com/wEMRe1d.png',
   },
   {
     id: 'video-4',
     src: 'https://i.imgur.com/FEEoaKu.mp4',
-    poster: 'https://i.imgur.com/iBwZzP0.png',
+    poster: 'https://i.imgur.com/iysGgAt.png',
+  },
+  {
+    id: 'video-5',
+    src: 'https://i.imgur.com/FEEoaKu.mp4', // Placeholder, assuming it's the same video for the 5th thumbnail
+    poster: 'https://i.imgur.com/D6UwpFg.png',
   },
 ];
 
