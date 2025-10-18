@@ -12,7 +12,7 @@ export function ProblemSection() {
     <section id="problem" className="py-8 md:py-12 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-headline">Você sabe que seu gato está entediado ele quer algo diferente.</h2>
+            <h2 className="text-3xl md:text-4xl font-headline">Você sabe que seu gato está entediado e que ele precisa de algo diferente.</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 text-left">
               {painPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-background rounded-lg shadow-sm">
