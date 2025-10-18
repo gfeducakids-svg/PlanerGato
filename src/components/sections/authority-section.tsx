@@ -14,7 +14,7 @@ export function AuthoritySection() {
                 <div className="flex flex-col sm:flex-row gap-8 justify-around items-center">
                     <div className="text-center">
                         <PawPrint className="mx-auto h-10 w-10 text-secondary mb-2"/>
-                        <p className="font-bold text-lg">Comportamentalistas Felinos</p>
+                        <p className="font-bold text-lg">Especialistas em Comportamento Felino</p>
                         <p className="text-sm text-muted-foreground">Equipe dedicada ao bem-estar dos gatos.</p>
                     </div>
                     <div className="text-center max-w-xs">
