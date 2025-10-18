@@ -23,13 +23,13 @@ export function ProblemSection() {
             </div>
              <div className="bg-background p-8 rounded-xl shadow-lg text-center space-y-4 !mt-10 max-w-3xl mx-auto">
                 <p className="text-lg text-muted-foreground">
-                    No fundo, você se pergunta: <span className="font-bold text-foreground">"Será que ele é infeliz comigo?"</span>
+                    “Será que meu gato é mesmo feliz comigo?”
                 </p>
                 <p className="text-muted-foreground">
-                    A verdade é que não é culpa sua. Gatos domésticos precisam de estímulos que reproduzam o instinto natural de caça — e 90% dos tutores não sabem como fazer isso.
+                    A verdade é que não é falta de amor — é só que os gatos precisam de um tipo de estímulo que a gente nunca aprendeu a dar. Eles sentem falta de caçar, explorar, vencer pequenos desafios... e tudo isso pode ser recriado dentro de casa, com leveza.
                 </p>
                  <p className="font-bold text-lg text-primary">
-                    A boa notícia? Reverter esse ciclo leva menos de 5 minutos por dia.
+                    A melhor parte? Bastam 5 minutinhos por dia pra transformar culpa em conexão — e ver seu gato redescobrir a alegria de brincar, como quando era filhote. 🐾
                 </p>
             </div>
         </div>
