@@ -49,6 +49,9 @@ export function SocialProofSection() {
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
 
   const handleVideoEnded = useCallback(() => {
     api?.scrollNext();
@@ -69,6 +72,7 @@ export function SocialProofSection() {
             setIsPlaying(newIsPlaying);
             
             video.play();
+            autoplayPlugin.current.stop();
             
             const newIsMuted = [...isMuted];
             newIsMuted[index] = false; // Unmute when user clicks to play
@@ -79,6 +83,7 @@ export function SocialProofSection() {
             const newIsPlaying = [...isPlaying];
             newIsPlaying[index] = false;
             setIsPlaying(newIsPlaying);
+            autoplayPlugin.current.play();
         }
     }
   };
@@ -101,6 +106,7 @@ export function SocialProofSection() {
       // Reset play and mute states
       setIsPlaying(Array(videoTestimonials.length).fill(false));
       setIsMuted(Array(videoTestimonials.length).fill(true));
+      autoplayPlugin.current.reset();
     };
 
     api.on('select', onSelect);
@@ -123,6 +129,7 @@ export function SocialProofSection() {
         </div>
         <Carousel
           setApi={setApi}
+          plugins={[autoplayPlugin.current]}
           opts={{
             align: 'start',
             loop: true,
