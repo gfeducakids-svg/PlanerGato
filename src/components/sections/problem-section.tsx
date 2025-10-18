@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BedDouble, AlertTriangle, Building2, Frown, ArrowRight } from "lucide-react";
 
 const painPoints = [
-    { icon: BedDouble, text: "Você volta do trabalho animada pra brincar, mas ele nem levanta da cama." },
+    { icon: BedDouble, text: "Você tenta anima-lo mas ele nem levanta da cama." },
     { icon: Frown, text: "Compra brinquedos novos e ele ignora em 2 dias." },
     { icon: AlertTriangle, text: "Quer dar atenção, mas não sabe como fazer ele se interessar." },
 ]
