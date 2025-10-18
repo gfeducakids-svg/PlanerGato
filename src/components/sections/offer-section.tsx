@@ -3,7 +3,7 @@ import { Check, Gift, Lock, CreditCard, Sparkles, Star, Send } from "lucide-reac
 
 export function OfferSection() {
   return (
-    <section id="offer" className="py-8 md:py-12 bg-card">
+    <section id="offer" className="py-12 md:py-16 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
@@ -13,50 +13,50 @@ export function OfferSection() {
             <Send className="h-8 w-8 text-primary mx-auto mt-4" />
           </div>
 
-          <div className="bg-background rounded-2xl shadow-xl p-8">
+          <div className="bg-background rounded-2xl shadow-xl p-6 md:p-8">
             <div className="grid grid-cols-1 gap-y-8">
               {/* Conteúdo Principal - Pacote e Bônus */}
               <div className="space-y-4">
-                <h3 className="font-headline text-xl text-primary">PACOTE COMPLETO</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <h3 className="font-headline text-xl md:text-2xl text-primary">PACOTE COMPLETO</h3>
+                <ul className="space-y-3 text-sm md:text-base text-muted-foreground">
                   <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">Planner 30 Dias com Método Instinto Feliz 3D</span>
                     <span className="text-xs">(R$ 49,00)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">Tabela de Progresso Semanal</span>
                     <span className="text-xs">(R$ 9,90)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">Guia de Enriquecimento Ambiental</span>
                     <span className="text-xs">(R$ 19,90)</span>
                   </li>
                    <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">Guia de Correção Rápida de Comportamentos</span>
                     <span className="text-xs">(R$ 19,90)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">E-book "Decodificando seu Gato"</span>
                     <span className="text-xs">(R$ 19,90)</span>
                   </li>
                   <li className="flex justify-between items-start gap-2">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                     <span className="flex-grow">Guia Noturnos para Gatos Agitados</span>
                     <span className="text-xs">(R$ 19,00)</span>
                   </li>
                 </ul>
                 <div className="space-y-4 pt-4">
-                    <h3 className="font-headline text-xl text-primary flex items-center gap-2">
+                    <h3 className="font-headline text-xl md:text-2xl text-primary flex items-center gap-2">
                         <Gift className="h-5 w-5" />
                         BÔNUS EXCLUSIVO
                     </h3>
                     <div className="pl-4 space-y-3">
-                        <div className="p-3 bg-card rounded-md">
+                        <div className="p-4 bg-card rounded-md">
                             <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> BÔNUS: Receitas de Petiscos Caseiros Saudáveis</p>
                             <p className="text-sm text-muted-foreground ml-5">10 Receitas aprovadas por veterinários para recompensar seu gato. <span className="font-bold">(Valor: R$ 17,90)</span></p>
                         </div>
@@ -65,7 +65,7 @@ export function OfferSection() {
               </div>
 
               {/* Seção de Preço e CTA */}
-              <div className="bg-card rounded-xl flex flex-col items-center justify-center p-8 text-center mt-8">
+              <div className="bg-card rounded-xl flex flex-col items-center justify-center p-6 md:p-8 text-center mt-8">
                   <div className="w-full space-y-2">
                     <h4 className="font-headline text-lg">Resumo do seu Investimento</h4>
                     <div className="flex justify-between items-center text-muted-foreground">
