@@ -23,10 +23,10 @@ export function ProblemSection() {
             </div>
              <div className="bg-background p-6 md:p-8 rounded-xl shadow-lg text-center space-y-4 !mt-10 max-w-3xl mx-auto">
                 <p className="text-muted-foreground text-base md:text-lg">
-                    A verdade é que não é falta de amor — é só que os gatos precisam de um tipo de estímulo que a gente nunca aprendeu a dar. Eles sentem falta de caçar, explorar, vencer pequenos desafios... e tudo isso pode ser recriado dentro de casa, com leveza.
+                    Não é falta de amor — só faltava o estímulo certo. Com pequenas brincadeiras que imitam o instinto natural, seu gato volta a explorar, caçar e se divertir.
                 </p>
                  <p className="font-bold text-lg md:text-xl text-primary">
-                    A melhor parte? Bastam 5 minutinhos por dia pra transformar culpa em conexão — e ver seu gato redescobrir a alegria de brincar, como quando era filhote. 🐾
+                    Em apenas 5 minutinhos por dia, você transforma culpa em conexão — e vê seu gato feliz de novo. 🐾
                 </p>
             </div>
         </div>
