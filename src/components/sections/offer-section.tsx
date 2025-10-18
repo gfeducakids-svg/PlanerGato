@@ -44,6 +44,11 @@ export function OfferSection() {
                     <span className="flex-grow">E-book "Decodificando seu Gato"</span>
                     <span className="text-xs">(R$ 19,90)</span>
                   </li>
+                  <li className="flex justify-between items-start gap-2">
+                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <span className="flex-grow">Guia Noturnos para Gatos Agitados</span>
+                    <span className="text-xs">(R$ 19,00)</span>
+                  </li>
                 </ul>
                 <div className="space-y-4 pt-4">
                     <h3 className="font-headline text-xl text-primary flex items-center gap-2">
@@ -51,10 +56,6 @@ export function OfferSection() {
                         BÔNUS EXCLUSIVO
                     </h3>
                     <div className="pl-4 space-y-3">
-                        <div className="p-3 bg-card rounded-md">
-                            <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> Guia Noturnos para Gatos Agitados</p>
-                            <p className="text-sm text-muted-foreground ml-5">Passo a passo para acalmar seu gato antes de dormir. <span className="font-bold">(Valor: R$ 19,00)</span></p>
-                        </div>
                         <div className="p-3 bg-card rounded-md">
                             <p className="font-bold flex items-center gap-1.5"><Star className="h-4 w-4 text-secondary fill-secondary" /> BÔNUS: Receitas de Petiscos Caseiros Saudáveis</p>
                             <p className="text-sm text-muted-foreground ml-5">10 Receitas aprovadas por veterinários para recompensar seu gato. <span className="font-bold">(Valor: R$ 17,90)</span></p>
