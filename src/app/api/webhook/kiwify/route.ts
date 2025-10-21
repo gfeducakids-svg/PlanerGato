@@ -7,10 +7,8 @@ import {
   cartAbandonedTemplate 
 } from '@/templates/emailTemplates';
 
-// A diretiva 'force-dynamic' é importante para garantir que o endpoint seja executado no servidor a cada chamada.
-export const dynamic = 'force-dynamic';
-
 export async function POST(request: NextRequest) {
+  console.log('[Kiwify] 🚀 Rota de webhook acessada.');
   try {
     const body = await request.json();
     
@@ -57,8 +55,9 @@ export async function POST(request: NextRequest) {
     // Responda 200 para a Kiwify confirmar o recebimento.
     return NextResponse.json({ success: true, message: 'Webhook processado.' }, { status: 200 });
   } catch (error: any) {
-    console.error('❌ Erro crítico no processamento do webhook:', error);
+    console.error('❌ Erro crítico no processamento do webhook:', error.message);
     // É crucial responder 200 mesmo em caso de erro, para evitar que a Kiwify reenvie o webhook indefinidamente.
+    // O log do erro é a parte mais importante aqui.
     return NextResponse.json({ success: false, error: 'Erro interno, mas webhook recebido.' }, { status: 200 });
   }
 }
