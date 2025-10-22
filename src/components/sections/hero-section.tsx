@@ -25,7 +25,14 @@ export function HeroSection() {
                 </div>
 
                 <div className="relative h-[350px] sm:h-[400px] lg:h-[450px] flex items-center justify-center">
-                    
+                    <Image
+                        src="https://i.imgur.com/XCq1Ejl.png"
+                        alt="Gato feliz brincando"
+                        width={500}
+                        height={450}
+                        className="rounded-xl shadow-2xl object-contain"
+                        data-ai-hint="happy cat playing"
+                    />
                 </div>
             </div>
         </div>
