@@ -9,6 +9,20 @@ import {
 
 export async function POST(request: NextRequest) {
   console.log('[Kiwify] 🚀 Rota de webhook acessada.');
+
+  // Log de diagnóstico para verificar as variáveis de ambiente
+  try {
+    const envKeys = Object.keys(process.env);
+    console.log('[Kiwify] Variáveis de ambiente disponíveis:', envKeys.join(', '));
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+        console.error('❌ [DIAGNÓSTICO] As variáveis GMAIL_USER ou GMAIL_APP_PASSWORD não foram encontradas em process.env.');
+    } else {
+        console.log('✅ [DIAGNÓSTICO] Variáveis de e-mail encontradas.');
+    }
+  } catch (e) {
+      console.error('❌ Erro ao tentar ler process.env:', e);
+  }
+
   try {
     const body = await request.json();
     
