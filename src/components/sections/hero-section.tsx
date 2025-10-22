@@ -17,11 +17,6 @@ export function HeroSection() {
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                         O Planner 30 Dias com <span className="font-bold" style={{color: '#FACC15'}}>Método Instinto Feliz 3D</span> que transforma 5 minutos em pura conexão.
                     </p>
-                     <div className="flex justify-center lg:justify-start">
-                        <Button asChild size="lg" className="w-full max-w-xs h-auto py-4 text-lg bg-coral hover:bg-coral/90 text-white font-bold animate-subtle-pulse shadow-lg text-wrap">
-                            <a href="#offer">Quero meu gato mais feliz</a>
-                        </Button>
-                    </div>
                 </div>
 
                 <div className="relative h-[350px] sm:h-[400px] lg:h-[450px] flex items-center justify-center">
